@@ -1,0 +1,146 @@
+* {
+    border: 0;
+    color:#4D4D4D;
+    font-family: "Consolas", "Courier New";
+    font-size: 30px;
+    line-height: 1em;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    text-decoration: none;
+    vertical-align: baseline;
+    overflow: hidden;
+}
+
+
+/*********** Basic elements ************/
+#app{
+}
+.background_black{
+    background: #000;
+}
+.backgroud_white{
+    background: #fff;
+}
+.default_color{
+    background-color: #4d4d4d;
+    border-color: #4d4d4d;
+    color: #4d4d4d;
+}
+.green_color{
+    background-color: #28ff00;
+    border-color: #28ff00;
+    color: #28ff00;
+}
+.white_color{
+    background-color: #fff;
+    border-color: #fff;
+    color: #fff;
+}
+.hide{
+    display: none !important;
+}
+
+/********* Header ***********/
+#header{
+    background-color: #000;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    margin:0 auto 0 0;
+    position: absolute;
+    width: 2rem;
+}
+.header_relative{
+    display: flex;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+.text_header{
+    color: #28ff00;
+    font-size:0.8em;
+    height: 2em;
+    margin: auto auto 1.5em 0.2em;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    width:100%;
+}
+.text_header b{
+    color: #28ff00;
+    font:700 1.1em;
+}
+
+/********* Menu *************/
+#menu{
+    display: flex;
+    flex-direction: column;
+    height: 65%;
+    position: absolute;
+    right: 2em;
+    top:15%;
+    z-index: 2;
+}
+#menu ul{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    list-style: none;
+}
+#menu li{
+    border: 1px solid;
+    border-radius: 50%;
+    height: 10pt;
+    margin: auto 0 0 auto;
+    width: 10pt;
+    cursor: pointer;
+}
+.unactive_button{
+    background-color: transparent;
+}
+
+/********** Home *************/
+#about{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+}
+.profile_picture{
+    border-radius: 50%;
+    height: 8em;
+    margin:2em auto auto auto;
+    width: 8em;
+}
+#hello_world{
+    font-weight: lighter;
+    height: 50%;
+    left: 17%;
+    position: absolute;
+    top:11em;
+    width: 65%;
+}
+#hello_world h1{
+    font-weight: lighter;
+    text-align: center;
+}
+#hello_world p{
+    font-size: 0.7em;
+    font-family: "Consolas" !important;
+    font-weight: lighter;
+}
+#personal_data{
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#personal_data p{
+    margin: 0 auto;
+    font-size: 0.5em;
+}
+#personal_data b{
+    margin: 0 auto;
+    font-size: 1em;
+}
