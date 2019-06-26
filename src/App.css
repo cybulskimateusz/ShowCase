@@ -14,7 +14,12 @@
 
 
 /*********** Basic elements ************/
-#app{
+.content{
+    position:absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
 }
 .background_black{
     background: #000;
@@ -42,62 +47,9 @@
 }
 
 /********* Header ***********/
-#header{
-    background-color: #000;
-    display: flex;
-    height: 100%;
-    justify-content: flex-end;
-    margin:0 auto 0 0;
-    position: absolute;
-    width: 2rem;
-}
-.header_relative{
-    display: flex;
-    height: 100%;
-    position: relative;
-    width: 100%;
-}
-.text_header{
-    color: #28ff00;
-    font-size:0.8em;
-    height: 2em;
-    margin: auto auto 1.5em 0.2em;
-    transform: rotate(-90deg);
-    white-space: nowrap;
-    width:100%;
-}
-.text_header b{
-    color: #28ff00;
-    font:700 1.1em;
-}
+
 
 /********* Menu *************/
-#menu{
-    display: flex;
-    flex-direction: column;
-    height: 65%;
-    position: absolute;
-    right: 2em;
-    top:15%;
-    z-index: 2;
-}
-#menu ul{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    list-style: none;
-}
-#menu li{
-    border: 1px solid;
-    border-radius: 50%;
-    height: 10pt;
-    margin: auto 0 0 auto;
-    width: 10pt;
-    cursor: pointer;
-}
-.unactive_button{
-    background-color: transparent;
-}
 
 /********** Home *************/
 #about{
