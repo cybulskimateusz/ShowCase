@@ -11,8 +11,9 @@ import Abilities from './components/Pages/Abilities/abilities';
 import Education from './components/Pages/Education/education';
 import SendMessage from './components/Pages/SendMessage/sendmessage';
 import Socials from './components/Pages/Socials/socials';
+import './App.css';
  
-class Main extends Component {
+class App extends Component {
   render() {
     return (
         <HashRouter>
@@ -30,4 +31,4 @@ class Main extends Component {
   }
 }
         
-export default Main;
+export default App;

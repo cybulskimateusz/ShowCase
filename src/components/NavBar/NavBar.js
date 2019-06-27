@@ -5,12 +5,12 @@ function NavBar(){
     return (
         <nav id="menu">
             <ul>
-                <li><NavLink exact to="/">.</NavLink></li>
-                <li><NavLink to="/projects" >.</NavLink></li>
-                <li><NavLink to="/abilities" >.</NavLink></li>
-                <li><NavLink to="/education" >.</NavLink></li>
-                <li><NavLink to="/sendmessage" >.</NavLink></li>
-                <li><NavLink to="/socials" >.</NavLink></li>
+                <li className="menu-li"><NavLink exact to="/">.</NavLink></li>
+                <li className="menu-li"><NavLink to="/projects" >.</NavLink></li>
+                <li className="menu-li"><NavLink to="/abilities" >.</NavLink></li>
+                <li className="menu-li"><NavLink to="/education" >.</NavLink></li>
+                <li className="menu-li"><NavLink to="/sendmessage" >.</NavLink></li>
+                <li className="menu-li"><NavLink to="/socials" >.</NavLink></li>
             </ul>
         </nav>
     );
