@@ -1,2 +1,0 @@
--          <article id="about">             <img className="profile_picture" src="src/profile.jpg"/>             <section id="hello_world">                 <h1><RealisticTyper message={header} wpm="10000" maxPause="0"/></h1>                 <br></br> <p><RealisticTyper message={content} wpm="10000" maxPause="100"/></p>             </section>             <div id="personal_data"><p><b>Name: </b>{name}</p><p><b>Surname: </b>{surname}</p><p><b>Age: </b>{age}</p><p><b>City: </b>{city}</p></div>         </article>
-

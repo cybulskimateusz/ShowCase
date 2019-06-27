@@ -7,7 +7,7 @@ class Projects extends Component{
     render(){
     
     return (
-        <Header preText="sssss" text=" aaa " postText="niet"/>
+        <Header preText="import.all.my." text="projects" postText="_"/>
     );
 }
 }
