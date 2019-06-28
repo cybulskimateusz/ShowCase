@@ -11,7 +11,11 @@ class Education extends Component{
         NavBar_color("#28ff00");
         document.querySelector("body").style.color="#28ff00";
         
-        return(<div className="black_screen"><Header preText="return " text="education" postText="_"/></div>);
-    }}
+        return(
+            <div className="black_screen"><Header preText="return " text="education" postText="_"/></div>
+        );
+        
+    }
+}
 
 export default Education;

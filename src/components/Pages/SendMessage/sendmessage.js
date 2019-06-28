@@ -7,10 +7,14 @@ import NavBar_color from '../../NavBar/NavBar_color';
 
 class SendMessage extends Component{
     render(){
+        
         NavBar_color("#fff");
         document.querySelector("body").style.color="#fff";
-        return(<div className="black_screen"><Header preText="" text="sendMessage()" postText="_"/></div>
+        
+        return(
+            <div className="black_screen"><Header preText="" text="sendMessage()" postText="_"/></div>
               );
+    
     }
 }
 
