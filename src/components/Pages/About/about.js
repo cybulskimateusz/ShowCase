@@ -1,10 +1,13 @@
 import React , {Component} from 'react';
 import ReactDOM from 'react-dom';
 import lateRealisticTyper from '../../lateRealisticTyper';
+import './about.css';
+import NavBar_color from '../../NavBar/NavBar_color';
 
 class About extends Component{
     
     render(){
+        NavBar_color("#4d4d4d");
         
     lateRealisticTyper("sooodaaaa","about_content",1500);
     lateRealisticTyper("Hello World, I'm Matthew","about_header",0);

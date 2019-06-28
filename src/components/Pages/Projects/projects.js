@@ -1,14 +1,18 @@
 import React , {Component} from 'react';
-import { RealisticTyper } from 'react-realistic-typer';
 import Header from '../../Header/Header';
 import './projects.css';
+import NavBar_color from '../../NavBar/NavBar_color';
+import NavBar from '../../NavBar/NavBar';
 
 class Projects extends Component{
     
     render(){
+        NavBar_color("#4d4d4d");
     
     return (
+        <>
         <Header preText="import.all.my." text="projects" postText="_"/>
+        </>
     );
 }
 }
