@@ -1,6 +1,3 @@
-import ReactDOM from 'react-dom';
-import React from 'react';
-
 function NavBar_color(color){
         if(document.contains(document.querySelector(".active"))){
         document.querySelector(".active").style.backgroundColor="transparent";

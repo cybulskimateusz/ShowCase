@@ -4,6 +4,7 @@ import lateRealisticTyper from '../../lateRealisticTyper';
 import './abilities.css';
 import '../black_screen.css';
 import Header from '../../Header/Header';
+import '../../Header/Header_green.css';
 import NavBar_color from '../../NavBar/NavBar_color';
 
 class Abilities extends Component{

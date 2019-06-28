@@ -4,6 +4,7 @@ import lateRealisticTyper from '../../lateRealisticTyper';
 import '../black_screen.css';
 import Header from '../../Header/Header';
 import NavBar_color from '../../NavBar/NavBar_color';
+import '../../Header/Header_green.css';
 
 class Socials extends Component{
     

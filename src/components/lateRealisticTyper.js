@@ -8,7 +8,6 @@ function lateRealisticTyper(what,where,when){
     let message=``+what+``;
     let location=''+where+'';
     ReactDOM.render(
-        
      <RealisticTyper message={message} wpm="500" maxPause="100"/>,
      document.getElementById(location)
     );

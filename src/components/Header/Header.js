@@ -4,8 +4,7 @@ import '../../App.css';
 import { RealisticTyper } from 'react-realistic-typer';
 import lateRealisticTyper from '../lateRealisticTyper';
 
-function Header({preText, text, postText}){
-    
+function Header({preText, text, postText, color}){
     let pretext = ''+preText+'';
     let maintext = ''+text+'';
     let posttext = ''+postText+'';

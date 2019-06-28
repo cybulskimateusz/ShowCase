@@ -15,7 +15,6 @@
     width: 100%;
 }
 .text_header, .text_header span{
-    color: #28ff00;
     height: 2em;
     transform: rotate(-90deg);
     white-space: nowrap;
@@ -23,7 +22,6 @@
     overflow: visible;
 }
 .text_header b,.text_header b span{
-    color: #28ff00;
     font-weight:700;
 }
 .text_header{
