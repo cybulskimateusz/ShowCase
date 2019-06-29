@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import NavBar from './components/NavBar/NavBar';
 import {
   Route,
-  NavLink,
   HashRouter
 } from "react-router-dom";
 import About from './components/Pages/About/about';
