@@ -15,21 +15,46 @@ class Projects extends Component{
         document.querySelector("body").style.color="#28ff00";
       
         lateRealisticTyper("Some project",".header_project",0);
-        lateRealisticTyper("You mean the future. Whatever! It demonstrates precisely how time travel can be misused and why the time machine must be destroyed - after we straighten all of this out. Right, so we go back to the future, and we stop Biff from stealing the almanac. We can't! Because, if we travel into the future from this point in time, it will be the future of this reality! (He underlines 1985-A on the board). In which Biff is corrupt, and powerful, and married to your mother; and in which this has happened to me! (He shows Marty another paper. The headline says “Emmett Brown Committed - Crackpot Inventor Declared Legally Insane.” A side story says “Biffco To Build New Dioxin Plant” and “Nixon To Seek 5th Term.” Einstein whines as Marty takes it.) No, our only chance to repair the present is in the past, at the point where the timeline skewed into this tangent. In order to put the universe back as we remember it, and get back to our reality, we have to find out the exact date, and the specific circumstances of how, where and when, young Biff got his hands on that sports almanac. I'll ask him.",".description_project",1000);
-        var projectHeight = ((window.innerHeight)*0.9);
+        lateRealisticTyper("You mean the future. Whatever! It demonstrates precisely how time travel can be misused and why the time machine must be destroyed - after we straighten all of this out. Right, so we go back to the future, and we stop Biff from stealing the almanac. We can't! Because, if we travel into the future from this point in time, it will be the future of this reality! (He underlines 1985-A on the board). In which Biff is corrupt, and powerful, and married to your mother; and in which this has happened to me! (He shows Marty another paper.",".description_project",1000);
          
         
     
     return (
         <ReactScrollWheelHandler
-    upHandler={() => TweenLite.to("#projects", .2, {scrollTop:-projectHeight})}
-    downHandler={() => TweenLite.to("#projects", .2, {scrollTop:projectHeight})}
+    upHandler={() => TweenLite.to("#projects", .6, {scrollTop:-window.innerHeight})}
+    downHandler={() => TweenLite.to("#projects", .6, {scrollTop:window.innerHeight})}
                 
     >
         <>
         
         <Header preText="import.all.my." text="projects" postText="_"/>
-        <div className="projects"id="projects"><div id="project_1" className="project"><div className="photo_container"><img className="project_picture" alt=" " src="src/profile.jpg"/><img className="project_picture" alt=" " src="src/profile.jpg"/><img className="project_picture" alt=" " src="src/profile.jpg"/></div><div className="about_project"><h1 className="header_project"></h1><br></br><p className="description_project"></p></div></div><div id="project_2" className="project"><div className="photo_container"><img className="project_picture" alt=" " src="src/profile.jpg"/><img className="project_picture" alt=" " src="src/profile.jpg"/><img className="project_picture" alt=" " src="src/profile.jpg"/></div><div className="about_project"><h1 className="header_project"></h1><br></br><p className="description_project"></p></div></div></div>
+            
+        <div className="projects"id="projects">
+            <div id="project_1" className="project">
+                <div className="photo_container">
+                    <img className="project_picture" alt=" " src="src/profile.jpg"/>
+                    <img className="project_picture" alt=" " src="src/profile.jpg"/>
+                    <img className="project_picture" alt=" " src="src/profile.jpg"/>
+                </div>
+                <div className="about_project">
+                    <h1 className="header_project"></h1>
+                    <br></br>
+                    <p className="description_project"></p>
+                </div>
+            </div>
+            <div id="project_2" className="project">
+                <div className="photo_container">
+                    <img className="project_picture" alt=" " src="src/profile.jpg"/>
+                    <img className="project_picture" alt=" " src="src/profile.jpg"/>
+                    <img className="project_picture" alt=" " src="src/profile.jpg"/>
+                </div>
+                <div className="about_project">
+                    <h1 className="header_project">HEGEGE</h1>
+                    <br></br>
+                    <p className="description_project">Oh, right, sorry. I gotta get another picture. Takes picture of tombstone. "...shot in the back by Buford Tannen over a matter of 80 dollars!" What kind of a future do you call that?! (Hill Valley Library) (The Library is obviously closed for the night, but Doc and Marty manage to break in and are going over old newspapers.) (reading from the newspaper) "Buford Tannen was a notorious gunman whose short temper and a tendency to drool earned him the nickname Mad Dog. He was quick on the trigger and bragged that he had killed 12 men, not including Indians or Chinamen."</p>
+                </div> 
+            </div>
+        </div>
 
         </>
 </ReactScrollWheelHandler>

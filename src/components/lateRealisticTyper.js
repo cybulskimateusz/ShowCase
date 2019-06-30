@@ -13,5 +13,4 @@ function lateRealisticTyper(what,where,when){
     );
 },when);
 }
-
 export default lateRealisticTyper;
