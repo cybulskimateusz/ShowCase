@@ -21,3 +21,15 @@
     width: 10pt;
     cursor: pointer;
 }
+.rec{
+    display: flex;
+    flex-direction: column;
+    height: 65%;
+    width: 30%;
+    position: absolute;
+    right: 3em;
+    top:15%;
+    z-index: 2;
+    background-color: aliceblue;
+    
+}

@@ -3,8 +3,9 @@ import './NavBar.css';
 import {NavLink} from "react-router-dom";
 function NavBar(){
     return (
+        <>
         <nav id="menu">
-            <ul>
+            <ul id="Nav">
                 <li className="menu-li"><NavLink className="menu-a" exact to="/">.</NavLink></li>
                 <li className="menu-li"><NavLink className="menu-a"  to="/projects" >.</NavLink></li>
                 <li className="menu-li"><NavLink className="menu-a"  to="/abilities" >.</NavLink></li>
@@ -13,6 +14,8 @@ function NavBar(){
                 <li className="menu-li"><NavLink className="menu-a"  to="/socials" >.</NavLink></li>
             </ul>
         </nav>
+        <div className="rec"></div>
+        </>
     );
 }
 
