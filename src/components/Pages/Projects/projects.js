@@ -17,22 +17,29 @@ class Projects extends Component {
   render() {
     NavBar_color("#4d4d4d");
     document.querySelector("body").style.color = "#28ff00"
-    var initialLocation = 2;
+    
+    var currentLocation = 1;
+    var nextLocation = 2;
+    
     return (
       <>
         <Header preText="import.all.my." text="projects" postText="_" />
         <ReactScrollWheelHandler
             upHandler={() => {
-                initialLocation= initialLocation-2;
-                var where = "#post_"+initialLocation
+                if(currentLocation<=nextLocation) nextLocation = currentLocation - 1
+                
+                var where = "#post_"+nextLocation
                 TweenMax.to("#projects",.4,{scrollTo:where})
+                currentLocation--
                 console.log(where)
             }
                              }
             downHandler={() => {
-                var where = "#post_"+initialLocation
+                if(currentLocation>=nextLocation) nextLocation = currentLocation + 1
+                
+                var where = "#post_"+nextLocation
                 TweenMax.to("#projects",.4,{scrollTo:where})
-                initialLocation++;
+                currentLocation++
                 console.log(where)
                                }}
             >
