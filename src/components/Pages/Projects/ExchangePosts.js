@@ -29,8 +29,8 @@ const ExchangePosts = () => (
       if (error) return <p>Error :(</p>;
 
       return data.posts.map(({ id, title, content, image1, image2, image3, number }) => (
-          
-          <div className="project" key={id} id={`post_${number}`} >   
+          <div className="project_container" key={id} id={`post_${number}`}>
+          <div className="project" >   
                 
                 <div className="photo_container">                         
                 
@@ -44,6 +44,7 @@ const ExchangePosts = () => (
                 <br></br>                   
                 <p className="description_project">{content}</p>        
                 </div>                    
+          </div>
           </div>
       ));
     }}

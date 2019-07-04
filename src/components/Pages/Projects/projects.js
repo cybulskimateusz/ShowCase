@@ -30,7 +30,7 @@ class Projects extends Component {
                 var where = "#post_"+nextLocation
                 
                if(document.getElementById('projects').contains(document.querySelector(where))){ 
-                    TweenMax.to("#projects",.4,{scrollTo:{y:where, offsetY:20}})
+                    TweenMax.to("#projects",.4,{scrollTo:{y:where, offsetY:0}})
                     currentLocation--
                     console.log(where)
                }else{
@@ -44,7 +44,7 @@ class Projects extends Component {
                 var where = "#post_"+nextLocation
                          
                 if(document.getElementById('projects').contains(document.querySelector(where))){
-                    TweenMax.to("#projects",.4,{scrollTo:{y:where, offsetY:20}})
+                    TweenMax.to("#projects",.4,{scrollTo:{y:where, offsetY:0}})
                     currentLocation++
                     console.log(where)
                 }else{
