@@ -14,7 +14,16 @@ function NavBar(){
                 <li className="menu-li"><NavLink className="menu-a"  to="/socials" >.</NavLink></li>
             </ul>
         </nav>
-        <div className="rec"></div>
+        <div className="rec">
+            <ul>
+        <li className="rec_li">About</li>
+        <li className="rec_li">Projects</li>
+        <li className="rec_li">Abilities</li>
+        <li className="rec_li">Education</li>
+        <li className="rec_li">Send message</li>
+        <li className="rec_li">Contact</li>
+        </ul>
+        </div>
         </>
     );
 }
