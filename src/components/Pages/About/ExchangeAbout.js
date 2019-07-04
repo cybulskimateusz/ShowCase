@@ -27,7 +27,7 @@ const ExchangeAbout = () => (
       if (loading) return <p>Loading...</p>;
       if (error) return <p>Error </p>;
       
-      return data.abouts.map(({ id,name, surname, age, city, profilephoto,header, content}) => (
+      return data.abouts.map(({ id,name, surname, age, city, profilephoto}) => (
           <article id="about" key={id}>
             <img src={`https://media.graphcms.com/${profilephoto.handle}`} className="profile_picture" alt="Hello, It's me" />
             <section id="hello_world">
