@@ -9,7 +9,6 @@ import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import TweenMax from "gsap";
 import scrollTo from "../../../../node_modules/gsap/ScrollToPlugin";
 import { TimelineMax } from "gsap";
-import $ from "jquery";
 
 const client = new ApolloClient({
   uri: "https://api-euwest.graphcms.com/v1/cjxlm9rgg00bi01hwbfp58wps/master"
