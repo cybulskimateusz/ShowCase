@@ -36,7 +36,9 @@
     width: 25%;
 }
 .project_picture{
+    height: 30%;
     margin: auto;
+    object-fit: cover;
 }
 .about_project{
     float:left;

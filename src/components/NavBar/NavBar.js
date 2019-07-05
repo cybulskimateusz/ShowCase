@@ -1,31 +1,99 @@
-import React from "react";
+import React, {Component} from "react";
 import './NavBar.css';
 import {NavLink} from "react-router-dom";
-function NavBar(){
-    return (
+import $ from 'jquery'
+import lateRealisticTyper from '../lateRealisticTyper';
+import ReactDOM from 'react-dom';
+
+const menu = document.querySelector("#menu")
+
+class NavBar extends Component{
+    render(){
+        return (
         <>
         <nav id="menu">
             <ul id="Nav">
-                <li className="menu-li"><NavLink className="menu-a" exact to="/">.</NavLink></li>
-                <li className="menu-li"><NavLink className="menu-a"  to="/projects" >.</NavLink></li>
-                <li className="menu-li"><NavLink className="menu-a"  to="/abilities" >.</NavLink></li>
-                <li className="menu-li"><NavLink className="menu-a"  to="/education" >.</NavLink></li>
-                <li className="menu-li"><NavLink className="menu-a"  to="/sendmessage" >.</NavLink></li>
-                <li className="menu-li"><NavLink className="menu-a"  to="/socials" >.</NavLink></li>
+                <li onMouseEnter={
+                        function(){
+                            lateRealisticTyper("Hello","#li_about",0)
+                        }
+                    }
+                    onMouseLeave={
+                        function(){
+                            ReactDOM.unmountComponentAtNode(document.getElementById('li_about'))
+                        }
+                    }
+                    className="menu-li"><NavLink className="menu-a" exact to="/">.</NavLink></li>
+                <li onMouseEnter={
+                        function(){
+                            lateRealisticTyper("Projects","#li_projects",0)
+                        }
+                    }
+                    onMouseLeave={
+                        function(){
+                            ReactDOM.unmountComponentAtNode(document.getElementById('li_projects'))
+                        }
+                    }
+                    className="menu-li"><NavLink className="menu-a"  to="/projects" >.</NavLink></li>
+                <li onMouseEnter={
+                        function(){
+                            lateRealisticTyper("Abilities","#li_abilities",0)
+                        }
+                    }
+                    onMouseLeave={
+                        function(){
+                            ReactDOM.unmountComponentAtNode(document.getElementById('li_abilities'))
+                        }
+                    }
+                    className="menu-li"><NavLink className="menu-a"  to="/abilities" >.</NavLink></li>
+                <li onMouseEnter={
+                        function(){
+                            lateRealisticTyper("Education","#li_education",0)
+                        }
+                    }
+                    onMouseLeave={
+                        function(){
+                            ReactDOM.unmountComponentAtNode(document.getElementById('li_education'))
+                        }
+                    }
+                    className="menu-li"><NavLink className="menu-a"  to="/education" >.</NavLink></li>
+                <li onMouseEnter={
+                        function(){
+                            lateRealisticTyper("Send message","#li_sendmessage",0)
+                        }
+                    }
+                    onMouseLeave={
+                        function(){
+                            ReactDOM.unmountComponentAtNode(document.getElementById('li_sendmessage'))
+                        }
+                    }
+                    className="menu-li"><NavLink className="menu-a"  to="/sendmessage" >.</NavLink></li>
+                <li onMouseEnter={
+                        function(){
+                            lateRealisticTyper("Socials","#li_socials",0)
+                        }
+                    }
+                    onMouseLeave={
+                        function(){
+                            ReactDOM.unmountComponentAtNode(document.getElementById('li_socials'))
+                        }
+                    }
+                    className="menu-li"><NavLink className="menu-a"  to="/socials" >.</NavLink></li>
             </ul>
         </nav>
-        <div className="rec">
-            <ul>
-        <li className="rec_li">About</li>
-        <li className="rec_li">Projects</li>
-        <li className="rec_li">Abilities</li>
-        <li className="rec_li">Education</li>
-        <li className="rec_li">Send message</li>
-        <li className="rec_li">Contact</li>
-        </ul>
-        </div>
+                    <ul id="menu_text">
+                        <li id="li_about" className="menu_text_li"></li>
+                        <li id="li_projects" className="menu_text_li"></li>
+                        <li id="li_abilities" className="menu_text_li"></li>
+                        <li id="li_education" className="menu_text_li"></li>
+                        <li id="li_sendmessage" className="menu_text_li"></li>
+                        <li id="li_socials" className="menu_text_li"></li>
+                    </ul>
         </>
     );
+}
+    
+    
 }
 
 export default NavBar;

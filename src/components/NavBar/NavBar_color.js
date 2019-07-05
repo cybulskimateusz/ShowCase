@@ -5,6 +5,7 @@ function NavBar_color(color){
             setTimeout(function(){
         document.querySelector(".active").style.backgroundColor=color;
         document.getElementById("menu").style.color=color;
+        document.getElementById("menu_text").style.color=color;
             },100)
     }
 

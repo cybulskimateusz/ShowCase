@@ -25,7 +25,7 @@ class Projects extends Component {
     var nextLocation = 2;
 
     setTimeout(function() {
-      tl.set(".project_container", { opacity: 0, y: 300 }).to("#post_1", 0.2, {
+      tl.set(".project_container", { opacity: 0, y: 1000 }).to("#post_1", 1, {
         opacity: 1,
         y: 0
       });
