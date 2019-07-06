@@ -1,0 +1,21 @@
+#abilities_container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+}
+#abilities{
+    margin:5em auto;
+    text-align: center;
+    position: relative;
+    width:80%;
+}
+.abilitie{
+    margin: 2em auto;
+    position: absolute;
+    font-size: 2em;
+    opacity: 0;
+    width: 100%;
+    
+}

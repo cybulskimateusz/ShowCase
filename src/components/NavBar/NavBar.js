@@ -23,7 +23,7 @@ class NavBar extends Component{
                             ReactDOM.unmountComponentAtNode(document.getElementById('li_about'))
                         }
                     }
-                    className="menu-li"><NavLink className="menu-a" exact to="/">.</NavLink></li>
+                    className="menu-li" id="button_about"><NavLink className="menu-a" exact to="/">.</NavLink></li>
                 <li onMouseEnter={
                         function(){
                             lateRealisticTyper("Projects","#li_projects",0)
@@ -34,7 +34,7 @@ class NavBar extends Component{
                             ReactDOM.unmountComponentAtNode(document.getElementById('li_projects'))
                         }
                     }
-                    className="menu-li"><NavLink className="menu-a"  to="/projects" >.</NavLink></li>
+                    className="menu-li" id="button_projects"><NavLink className="menu-a"  to="/projects" >.</NavLink></li>
                 <li onMouseEnter={
                         function(){
                             lateRealisticTyper("Abilities","#li_abilities",0)
@@ -45,7 +45,7 @@ class NavBar extends Component{
                             ReactDOM.unmountComponentAtNode(document.getElementById('li_abilities'))
                         }
                     }
-                    className="menu-li"><NavLink className="menu-a"  to="/abilities" >.</NavLink></li>
+                    className="menu-li"><NavLink id="button_abilities" className="menu-a"  to="/abilities" >.</NavLink></li>
                 <li onMouseEnter={
                         function(){
                             lateRealisticTyper("Education","#li_education",0)
@@ -56,7 +56,7 @@ class NavBar extends Component{
                             ReactDOM.unmountComponentAtNode(document.getElementById('li_education'))
                         }
                     }
-                    className="menu-li"><NavLink className="menu-a"  to="/education" >.</NavLink></li>
+                    className="menu-li" id="button_education"><NavLink className="menu-a"  to="/education" >.</NavLink></li>
                 <li onMouseEnter={
                         function(){
                             lateRealisticTyper("Send message","#li_sendmessage",0)
@@ -67,7 +67,7 @@ class NavBar extends Component{
                             ReactDOM.unmountComponentAtNode(document.getElementById('li_sendmessage'))
                         }
                     }
-                    className="menu-li"><NavLink className="menu-a"  to="/sendmessage" >.</NavLink></li>
+                    className="menu-li" id="button_sendmessage"><NavLink className="menu-a"  to="/sendmessage" >.</NavLink></li>
                 <li onMouseEnter={
                         function(){
                             lateRealisticTyper("Socials","#li_socials",0)
@@ -78,7 +78,7 @@ class NavBar extends Component{
                             ReactDOM.unmountComponentAtNode(document.getElementById('li_socials'))
                         }
                     }
-                    className="menu-li"><NavLink className="menu-a"  to="/socials" >.</NavLink></li>
+                    className="menu-li" id="button_socials"><NavLink className="menu-a"  to="/socials" >.</NavLink></li>
             </ul>
         </nav>
                     <ul id="menu_text">

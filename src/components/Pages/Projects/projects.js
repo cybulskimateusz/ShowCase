@@ -50,7 +50,7 @@ class Projects extends Component {
               });
               currentLocation--;
             } else {
-              window.location = "#/";
+              return
             }
           }}
           downHandler={() => {
@@ -71,7 +71,7 @@ class Projects extends Component {
               });
               currentLocation++;
             } else {
-              window.location = "#/abilities";
+              return
             }
           }}
         >
