@@ -16,7 +16,15 @@ class About extends Component{
     
     render(){
         NavBar_color("#4d4d4d")
-        setTimeout(function(){tl.set("#personal_data",{y:500,opacity:1}).to("#personal_data",.4,{y:0}).to(".profile_picture",.2,{opacity:1})},1000)
+        setTimeout(function(){
+            tl
+                .set("#menu",{opacity:0}, "-=1")
+                .set("#personal_data",{y:500,opacity:1},"-=1")
+                .set(".profile_picture",{opacity:0},"-=1")
+                .to(".profile_picture",.5,{opacity:1},"+=2")
+                .to("#menu",.5,{opacity:1})
+                .to("#personal_data",1,{y:0})}
+        ,1000)
         
     return (
         <ApolloProvider client={client}>

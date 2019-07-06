@@ -20,6 +20,7 @@ class Abilities extends Component {
           
             const abilities = document.querySelectorAll(".abilitie")
             tl
+                .set("#header",{opacity:1})
                 .set(abilities,{y:400})
                 .addLabel("start")
                 .to(abilities[0],.2,{opacity:1,y:0})

@@ -8,9 +8,9 @@ function Header({preText, text, postText, color}){
     let maintext = ''+text+'';
     let posttext = ''+postText+'';
     
-    lateRealisticTyper(pretext,"#preText",0);
-    lateRealisticTyper(maintext,"#text",1000);
-    lateRealisticTyper(posttext,"#postText",2000);
+    lateRealisticTyper(pretext,"#preText",3000);
+    lateRealisticTyper(maintext,"#text",4000);
+    lateRealisticTyper(posttext,"#postText",5000);
     
     return (
         <header id="header">
