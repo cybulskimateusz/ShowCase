@@ -6,8 +6,6 @@ import Header from "../../Header/Header";
 import "./projects.css";
 import NavBar_color from "../../NavBar/NavBar_color";
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
-import TweenMax from "gsap";
-import scrollTo from "../../../../node_modules/gsap/ScrollToPlugin";
 import { TimelineMax } from "gsap";
 
 const client = new ApolloClient({

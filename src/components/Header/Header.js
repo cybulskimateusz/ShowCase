@@ -1,7 +1,6 @@
 import React from 'react';
 import './Header.css';
 import '../../App.css';
-import { RealisticTyper } from 'react-realistic-typer';
 import lateRealisticTyper from '../lateRealisticTyper';
 
 function Header({preText, text, postText, color}){

@@ -1,21 +1,20 @@
 #abilities_container{
+    display: flex;
+    height: 100%;
     position: absolute;
     width: 100%;
-    height: 100%;
     z-index: 1;
-    display: flex;
 }
 #abilities{
     margin:5em auto;
-    text-align: center;
     position: relative;
+    text-align: center;
     width:80%;
 }
 .abilitie{
+    font-size: 2.5em;
     margin: 2em auto;
-    position: absolute;
-    font-size: 2em;
     opacity: 0;
+    position: absolute;
     width: 100%;
-    
 }
