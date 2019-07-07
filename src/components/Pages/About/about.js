@@ -15,17 +15,15 @@ const tl = new TimelineMax();
 class About extends Component{
     
     render(){
+        document.querySelector("html").style.backgroundColor = "#fff"
         NavBar_color("#4d4d4d")
         setTimeout(function(){
             tl
-                .set("#menu",{opacity:0}, "-=1")
                 .set("#personal_data",{y:500,opacity:1},"-=1")
                 .set(".profile_picture",{opacity:0},"-=1")
-                .to(".profile_picture",.5,{opacity:1},"+=2")
-                .to("#menu",.5,{opacity:1})
+                .to(".profile_picture",1,{opacity:1},"+=2")
                 .to("#personal_data",1,{y:0})}
         ,1000)
-        
     return (
         <ApolloProvider client={client}>
           <ExchangeAbout />

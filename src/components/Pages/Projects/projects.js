@@ -15,6 +15,7 @@ const tl = new TimelineMax();
 
 class Projects extends Component {
   render() {
+      document.querySelector("html").style.backgroundColor = "#fff"
     NavBar_color("#4d4d4d");
     document.querySelector("body").style.color = "#28ff00";
 
@@ -23,9 +24,10 @@ class Projects extends Component {
 
     setTimeout(function() {
       tl
+          .set("#menu",{opacity:1})
           .set(".project_container", { opacity: 0, y: 1000 },"-=1")
           .set("#header",{x:-600,opacity:1},"-=1")
-          .to("#header",1,{x:0})
+          .to("#header",3,{x:0})
           .to("#post_1", 1, {opacity: 1,y: 0})
       
     }, 1000);

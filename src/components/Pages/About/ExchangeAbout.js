@@ -2,6 +2,7 @@ import { gql } from "apollo-boost";
 import { Query } from "react-apollo";
 import React from "react";
 import lateRealisticTyper from "../../lateRealisticTyper";
+import './about.css'
 
 const ExchangeAbout = () => (
   <Query
@@ -23,7 +24,7 @@ const ExchangeAbout = () => (
     `}
   >
     {({ loading, error, data }) => {
-      if (loading) return <p>Loading...</p>;
+      if (loading) return <p className="load">Loading...</p>;
       if (error) return <p>Error </p>;
 
       return data.abouts.map(

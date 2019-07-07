@@ -13,14 +13,16 @@ const client = new ApolloClient({
   uri: "https://api-euwest.graphcms.com/v1/cjxlm9rgg00bi01hwbfp58wps/master"
 });
 const tl = new TimelineMax();
-
+var width = window.innerWidth;
 class Abilities extends Component {
   render() {
+document.querySelector("html").style.backgroundColor = "#000"
       setTimeout(function() {
           
             const abilities = document.querySelectorAll(".abilitie")
             tl
-                .set("#header",{opacity:1})
+                .set("#menu",{opacity:1})
+                .set("#header",{opacity:1},"-=1")
                 .set(abilities,{y:400})
                 .addLabel("start")
                 .to(abilities[0],.2,{opacity:1,y:0})
@@ -97,7 +99,6 @@ class Abilities extends Component {
                 return
             }}}
         >
-      <div className="black_screen">
         <Header preText="SELECT * FROM " text="abilities" postText="_" />
         <div id="abilities_container">
           <ul id="abilities">
@@ -106,7 +107,6 @@ class Abilities extends Component {
             </ApolloProvider>
           </ul>
         </div>
-      </div>
     </ReactScrollWheelHandler>
     );
   }
