@@ -7,6 +7,7 @@ import NavBar_color from "../../NavBar/NavBar_color";
 import { TimelineMax } from "gsap";
 import Terminal from "terminal-in-react";
 import "./sendmessage.css";
+import axios from 'axios'
 
 const tl = new TimelineMax();
 
@@ -19,13 +20,21 @@ class SendMessage extends Component {
       message: ""
     };
   }
+    componentDidCatch(error, info){
+        console.log(error)
+    }
+    componentDidMount=()=>{
+        const tl = new TimelineMax()
+        tl
+            .set(".menu-a",{backgroundColor:"transparent"})
+            .set("html",{backgroundColor:"#000"})
+            .set("#menu_text",{color:"#fff"})
+            .set("#menu",{color:"#fff"})
+            .set("body",{color:"#fff"})
+            .set("#header",{opacity:1})
+            .set(".active",{backgroundColor:"#fff"})
+    }
   render() {
-    document.querySelector("html").style.backgroundColor = "#000";
-    NavBar_color("#fff");
-    document.querySelector("body").style.color = "#fff";
-    setTimeout(function() {
-      tl.set("#header", { opacity: 1 }, "-=1").set("#menu", { opacity: 1 });
-    }, 1000);
 
     const mailReg = /^[0-9a-z_.-]+@[0-9a-z.-]+\.[a-z]{2,3}$/i;
 
@@ -45,7 +54,10 @@ class SendMessage extends Component {
                                 
                         }
                     this.setState({ message: text });
-                    print("Your mail is sent");
+                    axios.post("https://app.99inbound.com/api/e/4ieHVnW2",{
+                        email:this.state.email.toString(),
+                        message:text.toString()
+                    }).then(function(){print("Your message has sent")})
                   } else print("Type your e-mail adress");
                 },
                 options: [
@@ -58,7 +70,9 @@ class SendMessage extends Component {
               resume: {
                 method: (args, print, runCommand) => {
                   if (this.state.email != "") {
-                    print("You'll get my resume in a bit");
+                      var win = window.open("https://www45.zippyshare.com/d/TELFnOuP/47427/resume.pdf", '_blank');
+                      win.focus();
+                      print("Accept download")
                   } else print("Type your e-mail adress");
                 },
                 options: [

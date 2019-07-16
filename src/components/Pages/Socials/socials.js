@@ -9,16 +9,21 @@ const tl = new TimelineMax();
 
 var width = window.innerWidth;
 class Socials extends Component{
-    
+    componentDidCatch(error, info){
+        console.log(error)
+    }
+    componentDidMount=()=>{
+        const tl = new TimelineMax()
+        tl
+            .set(".menu-a",{backgroundColor:"transparent"})
+            .set("html",{backgroundColor:"#000"})
+            .set("#menu_text",{color:"#28ff00"})
+            .set("#menu",{color:"#28ff00"})
+            .set("body",{color:"#28ff00"})
+            .set("#header",{opacity:1})
+            .set(".active",{backgroundColor:"#28ff00"})
+    }
     render(){
-        document.querySelector("html").style.backgroundColor = "#000"
-        NavBar_color("#28ff00");
-        setTimeout(function(){
-            tl.set("#header",{opacity:1},"-=1")
-            .set("#menu",{opacity:1})
-        },1000
-        )
-        document.querySelector("body").style.color="#28ff00";
         return(<Header preText="System.out.print( " text="contact" postText=" )_"/>);
     }}
 

@@ -15,24 +15,31 @@ const client = new ApolloClient({
 const tl = new TimelineMax();
 var width = window.innerWidth;
 class Abilities extends Component {
-  render() {
-document.querySelector("html").style.backgroundColor = "#000"
-      setTimeout(function() {
-          
-            const abilities = document.querySelectorAll(".abilitie")
-            tl
-                .set("#menu",{opacity:1})
-                .set("#header",{opacity:1},"-=1")
+    componentDidCatch(error, info){
+        console.log(error)
+    }
+    componentDidMount=()=>{
+        const tl = new TimelineMax()
+        tl
+            .set(".menu-a",{backgroundColor:"transparent"})
+            .set("html",{backgroundColor:"#000"})
+            .set("#menu_text",{color:"#28ff00"})
+            .set("#menu",{color:"#28ff00"})
+            .set("body",{color:"#28ff00"})
+            .set("#header",{opacity:1})
+            .set(".active",{backgroundColor:"#28ff00"})
+        setTimeout(
+            function(){
+                const abilities = document.querySelectorAll(".abilitie")
+                tl
                 .set(abilities,{y:400})
                 .addLabel("start")
                 .to(abilities[0],.2,{opacity:1,y:0})
                 .to(abilities[1],.2,{opacity:.3,y:60},"start")
                 .to(abilities[2],.2,{opacity:.1,y:120},"start")
-      
-      }, 1000);
-      
-    NavBar_color("#28ff00");
-    document.querySelector("body").style.color = "#28ff00";
+            },1000);
+    }
+  render() {
       
       var currentLocation = 0;
       var nextLocation =1;

@@ -14,23 +14,32 @@ const client = new ApolloClient({
 const tl = new TimelineMax();
 
 class Projects extends Component {
+    componentDidCatch(error, info){
+        console.log(error)
+    }
+    componentDidMount=()=>{
+        const tl = new TimelineMax()
+        tl
+            .set(".menu-a",{backgroundColor:"transparent"})
+            .set("html",{backgroundColor:"#fff"})
+            .set("#menu_text",{color:"#4d4d4d"})
+            .set("#menu",{color:"#4d4d4d"})
+            .set("#header",{x:-600,opacity:1},"-=1")
+            .set(".active",{backgroundColor:"#4d4d4d"})
+            .to("#header",3,{x:0,color:"#28ff00"})
+        setTimeout(
+            function(){
+                tl
+          .set("#menu",{opacity:1})
+          .set(".project_container", { opacity: 0, y: 1000 },"-=1")
+          .to("#post_1", 1, {opacity: 1,y: 0})
+            },1000);
+    }
   render() {
-      document.querySelector("html").style.backgroundColor = "#fff"
-    NavBar_color("#4d4d4d");
-    document.querySelector("body").style.color = "#28ff00";
 
     var currentLocation = 1;
     var nextLocation = 2;
 
-    setTimeout(function() {
-      tl
-          .set("#menu",{opacity:1})
-          .set(".project_container", { opacity: 0, y: 1000 },"-=1")
-          .set("#header",{x:-600,opacity:1},"-=1")
-          .to("#header",3,{x:0})
-          .to("#post_1", 1, {opacity: 1,y: 0})
-      
-    }, 1000);
     return (
       <>
         <Header preText="import.all.my." text="projects" postText="_" />

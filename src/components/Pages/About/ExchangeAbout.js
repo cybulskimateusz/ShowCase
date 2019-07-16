@@ -36,7 +36,7 @@ const ExchangeAbout = () => (
               alt="Hello, It's me"
             />
             <section id="hello_world">
-              <h1 id="about_header"z />
+              <h1 id="about_header" />
               <br /> <p id="about_content" />
             </section>
             <div id="personal_data">
