@@ -20,6 +20,7 @@ const ExchangePosts = () => (
       handle
     }
     number
+    link
   }
 }
     `}
@@ -28,8 +29,9 @@ const ExchangePosts = () => (
       if (loading) return <p className="load">Loading...</p>;
       if (error) return <p>Error </p>;
 
-      return data.posts.map(({ id, title, content, image1, image2, image3, number }) => (
+      return data.posts.map(({ id, title, content, image1, image2, image3, number, link }) => (
           <div className="project_container" key={id} id={`post_${number}`}>
+<a href={link} title="Click to go!">
           <div className="project" >   
                 
                 <div className="photo_container">                         
@@ -45,6 +47,7 @@ const ExchangePosts = () => (
                 <p className="description_project">{content}</p>        
                 </div>                    
           </div>
+          </a>
           </div>
       ));
     }}
