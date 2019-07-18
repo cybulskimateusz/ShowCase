@@ -1,9 +1,39 @@
 #about{
     color:#4d4d4d;
 }
-#personal_data{
-    opacity: 0;
-}
 .profile_picture{
-    opacity: 0;
+    animation: appear .5s linear 2s both;
+}
+.name{
+    animation: slideup 2s linear 2.5s both;
+}
+
+.surname{
+    animation: slideup 2s linear 3s both;
+}
+
+.age{
+    animation: slideup 2s linear 3.5s both;
+}
+
+.city{
+    animation: slideup 2s linear 4s both;
+}
+
+@keyframes appear{
+    from{
+        opacity:0
+    }
+    to{
+        opacity:1
+    }
+}
+
+@keyframes slideup{
+    from{
+        transform: translateY(500px)
+    }
+    to{
+        transform: translateY(0)
+    }
 }

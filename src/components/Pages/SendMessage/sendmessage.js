@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import lateRealisticTyper from "../../lateRealisticTyper";
 import "../black_screen.css";
 import Header from "../../Header/Header";
-import NavBar_color from "../../NavBar/NavBar_color";
 import { TimelineMax } from "gsap";
 import Terminal from "terminal-in-react";
 import "./sendmessage.css";
@@ -70,9 +69,12 @@ class SendMessage extends Component {
               resume: {
                 method: (args, print, runCommand) => {
                   if (this.state.email != "") {
-                      var win = window.open("https://www45.zippyshare.com/d/TELFnOuP/47427/resume.pdf", '_blank');
+                      axios.post("https://app.99inbound.com/api/e/4ieHVnW2",{
+                        message:`User >>>${this.state.email.toString()}<<< asked for your resume`
+                    })
+                      var win = window.open("src/resume.pdf", '_blank');
                       win.focus();
-                      print("Accept download")
+                      print("This is my resume")
                   } else print("Type your e-mail adress");
                 },
                 options: [
@@ -94,17 +96,15 @@ class SendMessage extends Component {
                   }
                 ]
               },
-              consoling: {
+              thank: {
                 method: (args, print, runCommand) => {
-                  console.log(this.state.email.toString());
-                  print(this.state.message.toString());
-                },
-                options: [
-                  {
-                    name: "resume",
-                    description: "Sends you my resume"
-                  }
-                ]
+                  print("My pleasure");
+                }
+              },
+            thanks: {
+                method: (args, print, runCommand) => {
+                  print("My pleasure");
+                }
               }
             }}
             color="#fff"

@@ -1,3 +1,24 @@
+@keyframes showfirst{
+    from{
+        opacity:0;
+        transform: translateY(1000px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+@keyframes hidefirst{
+    from{
+        opacity:1;
+        transform: translateY(0);
+    }
+    to{
+        opacity:0;
+        transform: translateY(-500px);
+    }
+}
+
 .project_container{
     display: block;
     height: 100%;
@@ -55,4 +76,7 @@
 }
 .load{
     margin-left: 3em;
+}
+.project_container:nth-child(1){
+    animation: showfirst 1s linear both;
 }

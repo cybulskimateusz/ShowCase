@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./abilities.css";
 import "../black_screen.css";
 import Header from "../../Header/Header";
-import NavBar_color from "../../NavBar/NavBar_color";
 import ExchangeAbilities from "./ExchangeAbilities";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
@@ -15,9 +14,6 @@ const client = new ApolloClient({
 const tl = new TimelineMax();
 var width = window.innerWidth;
 class Abilities extends Component {
-    componentDidCatch(error, info){
-        console.log(error)
-    }
     componentDidMount=()=>{
         const tl = new TimelineMax()
         tl
@@ -28,16 +24,6 @@ class Abilities extends Component {
             .set("body",{color:"#28ff00"})
             .set("#header",{opacity:1})
             .set(".active",{backgroundColor:"#28ff00"})
-        setTimeout(
-            function(){
-                const abilities = document.querySelectorAll(".abilitie")
-                tl
-                .set(abilities,{y:400})
-                .addLabel("start")
-                .to(abilities[0],.2,{opacity:1,y:0})
-                .to(abilities[1],.2,{opacity:.3,y:60},"start")
-                .to(abilities[2],.2,{opacity:.1,y:120},"start")
-            },1000);
     }
   render() {
       

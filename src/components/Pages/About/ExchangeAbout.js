@@ -40,19 +40,19 @@ const ExchangeAbout = () => (
               <br /> <p id="about_content" />
             </section>
             <div id="personal_data">
-              <p>
+              <p className="name">
                 <b>Name: </b>
                 {name}
               </p>
-              <p>
+              <p className="surname">
                 <b>Surname: </b>
                 {surname}
               </p>
-              <p>
+              <p className="age">
                 <b>Age: </b>
                 {age}
               </p>
-              <p>
+              <p className="city">
                 <b>City: </b>
                 {city}
               </p>

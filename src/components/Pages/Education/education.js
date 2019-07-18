@@ -1,13 +1,21 @@
 import React , {Component} from 'react';
 import ReactDOM from 'react-dom';
 import lateRealisticTyper from '../../lateRealisticTyper';
-import '../black_screen.css';
 import Header from '../../Header/Header';
-import NavBar_color from '../../NavBar/NavBar_color';
 import { TimelineMax } from "gsap";
+import ApolloClient from "apollo-boost"
+import { ApolloProvider } from "react-apollo"
+import ExchangeEducation from "./ExchangeEducation"
+import './education.css'
 
 var width = window.innerWidth;
 const tl = new TimelineMax();
+
+
+const client = new ApolloClient({
+  uri: "https://api-euwest.graphcms.com/v1/cjxlm9rgg00bi01hwbfp58wps/master"
+});
+
 class Education extends Component{
     componentDidCatch(error, info){
         console.log(error)
@@ -26,7 +34,14 @@ class Education extends Component{
     render(){
         
         return(
+            <>
             <Header preText="return " text="education" postText="_"/>
+            <ul id="education" className="education">
+            <ApolloProvider client={client}>
+              <ExchangeEducation />
+            </ApolloProvider>
+          </ul>
+            </>
         );
         
     }

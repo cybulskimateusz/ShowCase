@@ -4,7 +4,6 @@ import { ApolloProvider } from "react-apollo";
 import ExchangePosts from "./ExchangePosts";
 import Header from "../../Header/Header";
 import "./projects.css";
-import NavBar_color from "../../NavBar/NavBar_color";
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import { TimelineMax } from "gsap";
 
@@ -14,9 +13,6 @@ const client = new ApolloClient({
 const tl = new TimelineMax();
 
 class Projects extends Component {
-    componentDidCatch(error, info){
-        console.log(error)
-    }
     componentDidMount=()=>{
         const tl = new TimelineMax()
         tl
@@ -26,14 +22,7 @@ class Projects extends Component {
             .set("#menu",{color:"#4d4d4d"})
             .set("#header",{x:-600,opacity:1},"-=1")
             .set(".active",{backgroundColor:"#4d4d4d"})
-            .to("#header",3,{x:0,color:"#28ff00"})
-        setTimeout(
-            function(){
-                tl
-          .set("#menu",{opacity:1})
-          .set(".project_container", { opacity: 0, y: 1000 },"-=1")
-          .to("#post_1", 1, {opacity: 1,y: 0})
-            },1000);
+            .to("#header",2,{x:0,color:"#28ff00"})
     }
   render() {
 
@@ -47,7 +36,6 @@ class Projects extends Component {
           upHandler={() => {
             if (currentLocation <= nextLocation)
               nextLocation = currentLocation - 1;
-
             var whereGo = "#post_" + nextLocation;
             var where = "#post_" + currentLocation;
             if (
@@ -59,12 +47,14 @@ class Projects extends Component {
                 y: 0,
                 opacity: 1
               });
+                document.getElementById("post_1").style.animation = "null"
               currentLocation--;
             } else {
               return
             }
           }}
           downHandler={() => {
+            document.getElementById("post_1").style.animation = "hidefirst .5s linear both"          
             if (currentLocation >= nextLocation)
               nextLocation = currentLocation + 1;
 

@@ -2,7 +2,6 @@ import React , {Component} from 'react';
 import ReactDOM from 'react-dom';
 import '../black_screen.css';
 import Header from '../../Header/Header';
-import NavBar_color from '../../NavBar/NavBar_color';
 import { TimelineMax } from "gsap";
 
 const tl = new TimelineMax();

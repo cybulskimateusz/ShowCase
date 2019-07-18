@@ -1,0 +1,16 @@
+.education{
+    margin: 1em auto auto 2em;
+    line-height: 1em;
+}
+.schoolname{
+    font-size: 1.2em;
+    
+}
+.date{
+    font-weight: 100;
+    
+}
+.description{
+    font-weight: 100;
+    font-size: .8em;
+}
