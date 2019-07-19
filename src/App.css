@@ -1,5 +1,6 @@
-* {
+:root,* {
     border: 0;
+    box-sizing: border-box;
     font-family: "Consolas", "Courier New";
     font-size: 30px;
     line-height: 1em;
@@ -53,47 +54,3 @@
 /********* Menu *************/
 
 /********** Home *************/
-#about{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    position: relative;
-    width: 100%;
-}
-.profile_picture{
-    border-radius: 50%;
-    height: 8em;
-    margin:5% auto auto auto;
-    width: 8em;
-}
-#hello_world{
-    font-weight: lighter;
-    height: 50%;
-    left: 17%;
-    position: absolute;
-    top:50%;
-    width: 65%;
-}
-#hello_world h1{
-    font-weight: lighter;
-    text-align: center;
-}
-#hello_world p{
-    font-size: 0.6em;
-    font-family: "Consolas" !important;
-    font-weight: lighter;
-}
-#personal_data{
-    height: 5vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
-#personal_data p{
-    margin: 0 auto;
-    font-size: 0.5em;
-}
-#personal_data b{
-    margin: 0 auto;
-    font-size: 1em;
-}

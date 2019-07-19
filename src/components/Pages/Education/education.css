@@ -1,6 +1,11 @@
 .education{
     margin: 1em auto auto 2em;
     line-height: 1em;
+    width: 100vw;
+    height: 100vh;
+}
+.school{
+    margin: 40vh auto 40vh auto;
 }
 .schoolname{
     font-size: 1.2em;

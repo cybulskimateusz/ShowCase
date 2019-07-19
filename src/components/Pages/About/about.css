@@ -1,8 +1,50 @@
 #about{
     color:#4d4d4d;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
 }
 .profile_picture{
     animation: appear .5s linear 2s both;
+    border-radius: 50%;
+    height: 35vh;
+    margin:10vh auto 5vh auto;
+    position: relative;
+    width: 35vh;
+}
+#hello_world{
+    font-weight: lighter;
+    height: 50%;
+    left: 17%;
+    position: relative;
+    width: 65%;
+}
+#hello_world h1{
+    font-weight: lighter;
+    text-align: center;
+}
+#hello_world p{
+    font-size: 0.6em;
+    font-family: "Consolas" !important;
+    font-weight: lighter;
+}
+#personal_data{
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 1vh;
+}
+#personal_data p{
+    margin: 0 auto;
+    font-size: 0.5em;
+}
+#personal_data b{
+    margin: 0 auto;
+    font-size: 1em;
 }
 .name{
     animation: slideup 2s linear 2.5s both;
