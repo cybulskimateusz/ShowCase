@@ -24,10 +24,9 @@ class Education extends Component{
     componentDidMount=()=>{
         const tl = new TimelineMax()
         tl
-            .set(".menu-a",{backgroundColor:"transparent"})
+            .set(".menu-li",{backgroundColor:"transparent",color:"#28ff00"})
             .set("html",{backgroundColor:"#000"})
             .set("#menu_text",{color:"#28ff00"})
-            .set("#menu",{color:"#28ff00"})
             .set("body",{color:"#28ff00"})
             .set("#header",{opacity:1})
             .set(".active",{backgroundColor:"#28ff00"})

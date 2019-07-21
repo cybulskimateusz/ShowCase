@@ -17,10 +17,9 @@ class About extends Component{
   }
     componentDidMount=()=>{
         new TimelineMax()
-            .set(".menu-a",{backgroundColor:"transparent"})
+            .set(".menu-li",{backgroundColor:"transparent",color:"#4d4d4d"})
             .set("html",{backgroundColor:"#fff"})
             .set("#menu_text",{color:"#4d4d4d"})
-            .set("#menu",{color:"#4d4d4d"})
             .set(".active",{backgroundColor:"#4d4d4d"})
     }
     

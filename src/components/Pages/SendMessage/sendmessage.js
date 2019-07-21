@@ -24,10 +24,9 @@ class SendMessage extends Component {
     componentDidMount=()=>{
         const tl = new TimelineMax()
         tl
-            .set(".menu-a",{backgroundColor:"transparent"})
+            .set(".menu-li",{backgroundColor:"transparent",color:"#fff"})
             .set("html",{backgroundColor:"#000"})
             .set("#menu_text",{color:"#fff"})
-            .set("#menu",{color:"#fff"})
             .set("body",{color:"#fff"})
             .set("#header",{opacity:1})
             .set(".active",{backgroundColor:"#fff"})
