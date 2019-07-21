@@ -88,8 +88,6 @@ class Abilities extends Component {
                             
                 nextLocation++
                 currentLocation++
-            }else{
-                return
             }}}
         >
         <Header preText="SELECT * FROM " text="abilities" postText="_" />

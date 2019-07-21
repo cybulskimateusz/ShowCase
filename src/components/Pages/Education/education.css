@@ -5,7 +5,18 @@
     height: 100vh;
 }
 .school{
-    margin: 40vh auto 40vh auto;
+    margin: 35vh auto 0 auto;
+    opacity: 1;
+    position: absolute;
+    transform: translateY(100vh);
+}
+.school:first-child{
+    opacity: 1;
+    transform: translateY(0);
+}
+.school:nth-child(2){
+    opacity: 1;
+    transform: translateY(45vh);
 }
 .schoolname{
     font-size: 1.2em;

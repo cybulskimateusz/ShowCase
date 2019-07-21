@@ -42,6 +42,13 @@ class SendMessage extends Component {
         <Header preText="" text="sendMessage()" postText="_" />
         <div>
           <Terminal
+            descriptions={{
+        'send':'send message',
+        'resume':'show my resume',
+        'edit-mail':'edit typed mail',
+        'thank':'My pleasure',
+        'thanks':'My pleasure'
+        }}
             commands={{
               send: {
                 method: (args, print, runCommand) => {
@@ -80,7 +87,7 @@ class SendMessage extends Component {
                 options: [
                   {
                     name: "resume",
-                    description: "Sends you my resume"
+                    description: "show my resume"
                   }
                 ]
               },

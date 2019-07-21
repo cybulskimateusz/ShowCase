@@ -9,7 +9,7 @@ import ExchangeEducation from "./ExchangeEducation"
 import './education.css'
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
-var width = window.innerWidth;
+const maxHeight = window.innerHeight;
 const tl = new TimelineMax();
 
 
@@ -40,39 +40,39 @@ class Education extends Component{
     return (
         <ReactScrollWheelHandler
             upHandler={() => {
-                const abilities = document.querySelectorAll(".school")
+                const schools = document.querySelectorAll(".school")
                 
                 if (currentLocation <= nextLocation)
                     nextLocation = currentLocation - 1;
-        
-                if(nextLocation>=0){
                 
-                    if(currentLocation+2<abilities.length)
-                        tl.to(abilities[currentLocation+2],.3,{y:600})
-                        
-                    if(currentLocation+1<abilities.length)
-                        tl.to(abilities[currentLocation+1],.3,{y:300})
-                        
+                if(nextLocation>=0){
                     tl
-                        .to(abilities[currentLocation],.3,{y:150})
-                        .to(abilities[nextLocation],.3,{y:0})
-            
-                    if(nextLocation-1>=0)
-                        tl.to(abilities[nextLocation-1],.4,{y:-150})
-                       
-                    if(nextLocation-2>=0)
-                        tl.to(abilities[nextLocation-2],.5,{y:-300})
-                        
+                        .addLabel('up')
+                        .to(schools[currentLocation],1,{y:((maxHeight/100)*45)},'up')
+                        .to(schools[nextLocation],1,{y:0},'up')
+                    if(currentLocation+1<=schools.length-1)
+                        tl.to(schools[currentLocation+1],1,{y:(maxHeight)},'up')
                 nextLocation--
              currentLocation--
 
-        }else{
-            return
         }}}
         downHandler={() => {
-            const abilities = document.querySelectorAll(".school")
-                     
-            tl.to(abilities, .4, {y:-(window.innerHeight/2)})}}
+            const schools = document.querySelectorAll(".school")
+            
+            if (currentLocation >= nextLocation)
+                nextLocation = currentLocation + 1;
+                      
+            if(nextLocation<schools.length) {
+                tl
+                    .addLabel('down')
+                    .to(schools[currentLocation],1,{y:-maxHeight},'down')
+                    .to(schools[nextLocation],1,{y:0},'down')
+                if(nextLocation+1 <= schools.length-1)
+                    tl.to(schools[nextLocation+1],1, {y:((maxHeight/100)*45)},'down')
+                    
+                nextLocation++
+             currentLocation++
+            }}}
         >
             <Header preText="return " text="education" postText="_"/>
             <ul id="education" className="education">
