@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import lateRealisticTyper from "../../lateRealisticTyper";
-import "../black_screen.css";
 import Header from "../../Header/Header";
 import { TimelineMax } from "gsap";
 import Terminal from "terminal-in-react";
@@ -79,7 +78,7 @@ class SendMessage extends Component {
                       axios.post("https://app.99inbound.com/api/e/4ieHVnW2",{
                         message:`User >>>${this.state.email.toString()}<<< asked for your resume`
                     })
-                      var win = window.open("/resume.pdf", '_blank');
+                      var win = window.open("files/resume.pdf", '_blank');
                       win.focus();
                       print("This is my resume")
                   } else print("Type your e-mail adress");

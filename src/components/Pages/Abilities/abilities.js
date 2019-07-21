@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./abilities.css";
-import "../black_screen.css";
 import Header from "../../Header/Header";
 import ExchangeAbilities from "./ExchangeAbilities";
 import ApolloClient from "apollo-boost";

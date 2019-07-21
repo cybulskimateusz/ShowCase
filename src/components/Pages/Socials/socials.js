@@ -1,8 +1,8 @@
-import React , {Component} from 'react';
-import ReactDOM from 'react-dom';
-import '../black_screen.css';
-import Header from '../../Header/Header';
-import { TimelineMax } from "gsap";
+import React , {Component} from 'react'
+import ReactDOM from 'react-dom'
+import Header from '../../Header/Header'
+import { TimelineMax } from "gsap"
+import './socials.css'
 
 const tl = new TimelineMax();
 
@@ -23,7 +23,11 @@ class Socials extends Component{
             .set(".active",{backgroundColor:"#28ff00"})
     }
     render(){
-        return(<Header preText="System.out.print( " text="contact" postText=" )_"/>);
+        return(
+            <>
+            <Header preText="System.out.print( " text="contact" postText=" )_"/>
+        <p className="contact">ABCDEFGHIJKL</p>
+        </>);
     }}
 
 export default Socials;
