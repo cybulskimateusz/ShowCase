@@ -16,10 +16,9 @@ class Projects extends Component {
     componentDidMount=()=>{
         const tl = new TimelineMax()
         tl
-            .set(".menu-li",{backgroundColor:"transparent"})
+            .set(".menu-li",{backgroundColor:"transparent",color:"#4d4d4d"})
             .set("html",{backgroundColor:"#fff"})
             .set("#menu_text",{color:"#4d4d4d"})
-            .set("#menu",{color:"#4d4d4d"})
             .set("#header",{x:-600,opacity:1},"-=1")
             .set(".active",{backgroundColor:"#4d4d4d"})
             .to("#header",2,{x:0,color:"#28ff00"})
@@ -43,9 +42,10 @@ class Projects extends Component {
                 .getElementById("projects")
                 .contains(document.querySelector(whereGo))
             ) {
-              tl.to(where, 0.2, { y: 300, opacity: 0 }).to(whereGo, 0.2, {
+              tl.to(where, 0.2, { y: 300, opacity: 0,"z-index":0 }).to(whereGo, 0.2, {
                 y: 0,
-                opacity: 1
+                opacity: 1,
+                "z-index":1
               });
                 document.getElementById("post_1").style.animation = "null"
               currentLocation--;
@@ -66,9 +66,10 @@ class Projects extends Component {
                 .getElementById("projects")
                 .contains(document.querySelector(whereGo))
             ) {
-              tl.to(where, 0.2, { y: -300, opacity: 0 }).to(whereGo, 0.2, {
+              tl.to(where, 0.2, { y: -300, opacity: 0, "z-index":0 }).to(whereGo, 0.2, {
                 y: 0,
-                opacity: 1
+                opacity: 1,
+                "z-index":1
               });
               currentLocation++;
             } else {

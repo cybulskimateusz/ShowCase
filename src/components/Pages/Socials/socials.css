@@ -1,23 +1,51 @@
 .content{
     display: flex;
 }
+.socials{
+    display: inline-flex;
+    flex-direction: row;
+    height: 4rem;
+    margin:auto;
+    position: relative;
+    width: 90vw;
+}
+.contacts{
+    display: inline-block;
+    height: 4rem;
+    margin:auto;
+    position: relative;
+}
 .contact{
     color: #28ff00;
-    cursor: pointer;
-    font-size: 2em;
-    margin:auto;
+    font-size: 4em;
+    list-style: none;
+    opacity: 0;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 0;
 }
-.contact::before{
+.contact:first-child{
+    opacity: 1;
+    z-index:1;
+}
+.previous{
     animation: blink 1s both infinite;
     content: "<";
     cursor: pointer;
-    margin-right: 1em;
+    font-size: 4rem;
+    margin: auto;
 }
-.contact::after{
+.next{
     animation: blink 1s both infinite;
     content: ">";
     cursor: pointer;
-    margin-left: 1em;
+    font-size: 4rem;
+    margin: auto;
+}
+.contact a{
+    color: #28ff00;
+    display: inline-block;
+    font-size: 2.5rem;
 }
 
 @keyframes blink{

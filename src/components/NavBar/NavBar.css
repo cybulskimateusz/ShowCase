@@ -36,4 +36,5 @@
     height: .4.5rem;
     margin: auto 0 0 auto;
     cursor: pointer;
+    list-style: none;
 }
