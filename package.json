@@ -12,6 +12,7 @@
     "graphql-tag": "^2.10.1",
     "gsap": "^2.1.3",
     "jquery": "^3.4.1",
+    "node-modules": "^1.0.1",
     "radium": "^0.25.2",
     "react": "^16.8.6",
     "react-apollo": "^2.5.8",
