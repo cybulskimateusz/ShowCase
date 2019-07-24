@@ -65,14 +65,11 @@ class Socials extends Component{
             
                 nextLocation--
                 currentLocation--
-                console.log(nextLocation + ":"+ currentLocation)
             }}
             >&lt;</p>
             <ApolloProvider client={client}>
             <ul className='contacts'>
             <li className='contact'><a className='contact_a' id='contact_a' href='#'>
-          <span className='cell'></span>
-          <span className='cell'></span>
           <span className='cell'></span>
           <span className='cell'></span>
           <span className='cell'></span>
@@ -120,9 +117,8 @@ class Socials extends Component{
             
                 nextLocation++
                 currentLocation++
-                console.log(nextLocation + ":"+ currentLocation)
             }}
-            >/&gt;</p>
+            >&gt;</p>
             </div>
         </>);
     }}

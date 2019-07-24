@@ -19,7 +19,9 @@ const ExchangeSocials = () => (
       if (error) return <p>lol</p>;
 
       return data.contacts.map(({ name, link, id,tag }) => (
+        <div>
         <a className='contactway'href={link} key={id}>{name}</a>
+          </div>
       ));
     }}
   </Query>

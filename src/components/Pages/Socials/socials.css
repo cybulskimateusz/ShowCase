@@ -37,14 +37,14 @@
     z-index:1;
 }
 .previous{
-    animation: blink .6s both infinite;
+    animation: blink .5s both infinite;
     content: "<";
     cursor: pointer;
     font-size: 4rem;
     margin: auto;
 }
 .next{
-    animation: blink .6s both infinite;
+    animation: blink .5s .3s both infinite;
     content: ">";
     cursor: pointer;
     font-size: 4rem;
@@ -54,6 +54,8 @@
     color: #28ff00;
     display: inline-block;
     font-size: 2.5rem;
+    height: 4rem;
+    margin-top: .5rem;
 }
 
 @keyframes blink{
