@@ -1,22 +1,38 @@
 import TimelineMax from 'gsap'
+import React from 'react'
+import ReactDOM from 'react-dom'
     
 
-function textGenerating(){
-    var currentLocation=0
-    var nextLocation=1
+function textGenerating(stringTable, where){
     
-        if(document.contains(document.querySelector('.contact'))){
-            var contacts = document.querySelectorAll('.contact')
+    ReactDOM.render(<div id='cells'></div>, document.querySelector(where))
+    
+    var cellsAmount = 0
+    var nextIndex   = 1
+    
+    for(var i=0;i<stringTable.length;i++){
         
-        if (currentLocation >= nextLocation)
-            nextLocation = currentLocation + 1;
+        var tmpString = new String(stringTable[i])
         
-        new TimelineMax()
-            .to(contacts[currentLocation],0,{"z-index":0,opacity:0})
-            .to(contacts[nextLocation],0,{"z-index":1,opacity:1})
-        
-        nextLocation++
-        currentLocation++}
+        if( tmpString.length > cellsAmount)
+            cellsAmount = tmpString.length
+    }
+    
+    for(var i=0; i<cellsAmount; i++){
+        ReactDOM.render(<span className='cell'></span>, document.querySelector('#cells'))
+    }
+    document.querySelector('#next').click(
+        function(){
+            var tmpString = new String(stringTable[nextIndex])
+            var firstCellIndex = Math.floor((tmpString.length % cellsAmount)/2)
+            
+            for(var i=firstCellIndex;i<=tmpString.length;i++){
+                var cells = document.querySelectorAll('.cell')
+                
+                cells[i].innerHTML = tmpString.charAt(i)
+                
+            }
+        })
 }
 
 export default textGenerating

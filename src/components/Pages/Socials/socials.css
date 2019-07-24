@@ -1,3 +1,9 @@
+#values{
+    display: none;
+}
+.cell{
+    font-size: 3rem;
+}
 .content{
     display: flex;
 }
@@ -29,14 +35,14 @@
     z-index:1;
 }
 .previous{
-    animation: blink 1s both infinite;
+    animation: blink .6s both infinite;
     content: "<";
     cursor: pointer;
     font-size: 4rem;
     margin: auto;
 }
 .next{
-    animation: blink 1s both infinite;
+    animation: blink .6s both infinite;
     content: ">";
     cursor: pointer;
     font-size: 4rem;

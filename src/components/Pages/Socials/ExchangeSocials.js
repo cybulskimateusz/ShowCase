@@ -16,10 +16,10 @@ const ExchangeSocials = () => (
   >
     {({ loading, error, data }) => {
       if (loading) return <p className="load">Loading...</p>;
-      if (error) return <p>Error </p>;
+      if (error) return <p>lol</p>;
 
       return data.contacts.map(({ name, link, id,tag }) => (
-        <li className='contact' id={tag} key={id}><a href={link}>{name}</a></li>
+        <a className='contactway'href={link} key={id}>{name}</a>
       ));
     }}
   </Query>
