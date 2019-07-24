@@ -35,7 +35,39 @@ class Socials extends Component{
             <>
             <Header preText="System.out.print( " text="contact" postText=" )_"/>
         <div className='socials'>
-            <p className='previous' id='previous'>&lt;</p>
+            <p className='previous' id='previous'
+            onClick={function(){
+            
+                if(nextLocation>=currentLocation)
+                    nextLocation = currentLocation - 1
+                    
+                var contact = document.querySelectorAll('.contactway')
+                
+                if(nextLocation<0){
+                    nextLocation = contact.length-1
+                    currentLocation = contact.length }
+                
+                var cell = document.querySelectorAll('.cell')
+                var href = contact[nextLocation].getAttribute('href')
+                var name = contact[nextLocation].textContent
+                var firstIndex = Math.floor((12 % name.length)/2)
+                var x = 0
+                
+                for(var i=0;i<cell.length;i++){
+                cell[i].innerHTML = ""
+                }
+                for(var i=firstIndex;i<cell.length;i++){
+                cell[i].innerHTML = name.charAt(x)
+                x++
+                }
+                
+                document.querySelector('#contact_a').href = href
+            
+                nextLocation--
+                currentLocation--
+                console.log(nextLocation + ":"+ currentLocation)
+            }}
+            >&lt;</p>
             <ApolloProvider client={client}>
             <ul className='contacts'>
             <li className='contact'><a className='contact_a' id='contact_a' href='#'>
@@ -60,10 +92,15 @@ class Socials extends Component{
             </ApolloProvider>
             <p className='next' id='next'
             onClick={function(){
+            
+                if(nextLocation<=currentLocation)
+                    nextLocation = currentLocation + 1
+            
                 var contact = document.querySelectorAll('.contactway')
                 
-                if(nextLocation>contact.length-1)
+                if(nextLocation>contact.length-1){
                     nextLocation = 0
+                    currentLocation = -1}
                 
                 var cell = document.querySelectorAll('.cell')
                 var href = contact[nextLocation].getAttribute('href')
@@ -82,6 +119,8 @@ class Socials extends Component{
                 document.querySelector('#contact_a').href = href
             
                 nextLocation++
+                currentLocation++
+                console.log(nextLocation + ":"+ currentLocation)
             }}
             >/&gt;</p>
             </div>
