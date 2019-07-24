@@ -3,6 +3,8 @@
 }
 .cell{
     font-size: 3rem;
+    display: inline-block;
+    width: 2rem;
 }
 .content{
     display: flex;

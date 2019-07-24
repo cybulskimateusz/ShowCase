@@ -105,7 +105,7 @@ class Socials extends Component{
                 var cell = document.querySelectorAll('.cell')
                 var href = contact[nextLocation].getAttribute('href')
                 var name = contact[nextLocation].textContent
-                var firstIndex = Math.floor((12 % name.length)/2)
+                var firstIndex = Math.floor((12 - name.length)/2)
                 var x = 0
                 
                 for(var i=0;i<cell.length;i++){
