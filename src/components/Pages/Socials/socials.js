@@ -50,15 +50,37 @@ class Socials extends Component{
                 var cell = document.querySelectorAll('.cell')
                 var href = contact[nextLocation].getAttribute('href')
                 var name = contact[nextLocation].textContent
-                var firstIndex = Math.floor((12 - name.length)/2)
-                var x = 0
-                
-                for(var i=0;i<cell.length;i++){
-                cell[i].innerHTML = ""
+                function makeid(length) {
+                   var result           = '';
+                   var characters       = 'abcdefghijklmnopqrstuvwxyz0123456789';
+                   var charactersLength = characters.length;
+                   for ( var i = 0; i < length; i++ ) {
+                      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+                   }
+                   return result;
                 }
-                for(var i=firstIndex;i<cell.length;i++){
-                cell[i].innerHTML = name.charAt(x)
-                x++
+                
+                var starttime = 0
+                var maxtime = 500
+                
+                for(var i=0;i<=10;i++){
+                    
+                    (function(i){
+                        for(var j=starttime;j<=maxtime;j+=100){
+                            
+                            if(j<maxtime) setTimeout(function(){
+                                cell[i].innerHTML = makeid(1)
+                            },j)
+                            
+                            else setTimeout(function(){
+                                cell[i].innerHTML = name.charAt(i)
+                            },j)
+                        }
+                    
+                })(i, maxtime)
+                    starttime+=100
+                    maxtime+=100
+                    
                 }
                 
                 document.querySelector('#contact_a').href = href
@@ -102,16 +124,40 @@ class Socials extends Component{
                 var cell = document.querySelectorAll('.cell')
                 var href = contact[nextLocation].getAttribute('href')
                 var name = contact[nextLocation].textContent
-                var firstIndex = Math.floor((12 - name.length)/2)
-                var x = 0
+                function makeid(length) {
+                   var result           = '';
+                   var characters       = 'abcdefghijklmnopqrstuvwxyz0123456789';
+                   var charactersLength = characters.length;
+                   for ( var i = 0; i < length; i++ ) {
+                      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+                   }
+                   return result;
+                }
                 
-                for(var i=0;i<cell.length;i++){
-                cell[i].innerHTML = ""
+                var starttime = 0
+                var maxtime = 500
+                
+                for(var i=0;i<=10;i++){
+                    
+                    (function(i){
+                        for(var j=starttime;j<=maxtime;j+=100){
+                            
+                            if(j<maxtime) setTimeout(function(){
+                                cell[i].innerHTML = makeid(1)
+                            },j)
+                            
+                            else setTimeout(function(){
+                                cell[i].innerHTML = name.charAt(i)
+                            },j)
+                        }
+                    
+                })(i, maxtime)
+                    starttime+=100
+                    maxtime+=100
+                    
                 }
-                for(var i=firstIndex;i<cell.length;i++){
-                cell[i].innerHTML = name.charAt(x)
-                x++
-                }
+                
+                
                 
                 document.querySelector('#contact_a').href = href
             

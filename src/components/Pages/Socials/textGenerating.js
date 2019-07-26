@@ -17,7 +17,6 @@ function textGenerating(stringTable, where){
         if( tmpString.length > cellsAmount)
             cellsAmount = tmpString.length
     }
-    
     for(var i=0; i<cellsAmount; i++){
         ReactDOM.render(<span className='cell'></span>, document.querySelector('#cells'))
     }
