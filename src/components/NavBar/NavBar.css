@@ -39,3 +39,8 @@
     cursor: pointer;
     list-style: none;
 }
+@media (any-hover:none),(any-pointer:coarse){
+    #menu_text{
+        display: none;
+    }
+}

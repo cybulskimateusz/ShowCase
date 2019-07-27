@@ -14,9 +14,6 @@
     overflow: hidden;
     
 }
-
-
-/*********** Basic elements ************/
 .content{
     height: 100vh;
     margin: 0;
@@ -25,34 +22,30 @@
     width: 100%;
     z-index: 1;
 }
-.background_black{
-    background: #000;
+.loadercontainer{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: absolute;
 }
-.backgroud_white{
-    background: #fff;
+.loader {
+  animation: spin 2s linear infinite;
+  border: 1vh solid transparent;
+  border-radius: 50%;
+  border-top: 1vh solid #28ff00;
+  height: 20vh;
+  margin: auto;
+  width: 20vh;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
 }
-.default_color{
-    background-color: #4d4d4d;
-    border-color: #4d4d4d;
-    color: #4d4d4d;
-}
-.green_color{
-    background-color: #28ff00;
-    border-color: #28ff00;
-    color: #28ff00;
-}
-.white_color{
-    background-color: #fff;
-    border-color: #fff;
-    color: #fff;
-}
-.hide{
-    display: none !important;
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
 }
 
-/********* Header ***********/
-
-
-/********* Menu *************/
-
-/********** Home *************/
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

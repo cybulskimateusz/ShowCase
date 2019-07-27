@@ -1,6 +1,4 @@
 import React , {Component} from 'react';
-import ReactDOM from 'react-dom';
-import lateRealisticTyper from '../../lateRealisticTyper';
 import Header from '../../Header/Header';
 import { TimelineMax } from "gsap";
 import ApolloClient from "apollo-boost"
@@ -18,9 +16,9 @@ const client = new ApolloClient({
 });
 
 class Education extends Component{
-    componentDidCatch(error, info){
-        console.log(error)
-    }
+    componentWillUnmount() {
+    this.componentMounted = false;
+  }
     componentDidMount=()=>{
         const tl = new TimelineMax()
         tl

@@ -11,8 +11,10 @@ const client = new ApolloClient({
   uri: "https://api-euwest.graphcms.com/v1/cjxlm9rgg00bi01hwbfp58wps/master"
 });
 const tl = new TimelineMax();
-var width = window.innerWidth;
 class Abilities extends Component {
+    componentWillUnmount() {
+        this.componentMounted = false;
+    }
     componentDidMount=()=>{
         const tl = new TimelineMax()
         tl

@@ -26,8 +26,8 @@ const ExchangePosts = () => (
     `}
   >
     {({ loading, error, data }) => {
-      if (loading) return <p className="load">Loading...</p>;
-      if (error) return <p>Error </p>;
+      if (loading) return <div className='loadercontainer'><div className='loader'></div></div>
+      if (error) return <p>Error :-( </p> 
 
       return data.posts.map(({ id, title, content, image1, image2, image3, number, link }) => (
           <div className="project_container" key={id} id={`post_${number}`}>

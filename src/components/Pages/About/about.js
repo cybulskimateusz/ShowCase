@@ -4,7 +4,6 @@ import ApolloClient from "apollo-boost"
 import { ApolloProvider } from "react-apollo"
 import ExchangeAbout from "./ExchangeAbout"
 import { TimelineMax } from "gsap"
-import ReactDOM from 'react-dom'
 
 
 const client = new ApolloClient({
@@ -12,9 +11,9 @@ const client = new ApolloClient({
 });
 
 class About extends Component{
-    constructor(props) {
-    super(props);
-  }
+    componentWillMount() {
+        this.componentMounted = false;
+    }
     componentDidMount=()=>{
         new TimelineMax()
             .set(".menu-li",{backgroundColor:"transparent",color:"#4d4d4d"})

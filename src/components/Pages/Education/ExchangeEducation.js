@@ -1,7 +1,6 @@
 import { gql } from "apollo-boost";
 import { Query } from "react-apollo";
 import React from "react";
-import lateRealisticTyper from "../../lateRealisticTyper";
 
 
 const ExchangeEducation = () => (
@@ -18,8 +17,8 @@ const ExchangeEducation = () => (
     `}
   >
     {({ loading, error, data }) => {
-      if (loading) return <p className="load">Loading...</p>;
-      if (error) return <p>Error </p>;
+      if (loading) return <div className='loadercontainer'><div className='loader'></div></div>
+      if (error) return <p>Error :-( </p> 
 
       return data.educations.map(
         ({ id, school, date, more}) => (

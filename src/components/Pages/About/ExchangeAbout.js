@@ -1,6 +1,7 @@
 import { gql } from "apollo-boost";
 import { Query } from "react-apollo";
 import React from "react";
+import ReactDOM from "react-dom";
 import lateRealisticTyper from '../../lateRealisticTyper'
 import './about.css'
 
@@ -24,8 +25,8 @@ const ExchangeAbout = () => (
     `}
   >
     {({ loading, error, data }) => {
-      if (loading) return <p className="load">Loading...</p>;
-      if (error) return <p>Error </p>;
+      if (loading) return <div className='loadercontainer'><div className='loader'></div></div>
+      if (error) return <p>Error :-( </p> 
 
       return data.abouts.map(
         ({ id, name, surname, age, city, profilephoto }) => (
@@ -36,7 +37,7 @@ const ExchangeAbout = () => (
               alt="Hello, It's me"
             />
             <section id="hello_world">
-              <h1 id="about_header" />
+              <h1 id="about_header">  </h1>
               <br /> <p id="about_content" />
             </section>
             <div id="personal_data">
@@ -60,6 +61,7 @@ const ExchangeAbout = () => (
             {data.abouts.map(function({ header, content }) {
               lateRealisticTyper(header.toString(), "#about_header", 0);
               lateRealisticTyper(content.toString(), "#about_content", 2500);
+              return console.log("© Mateusz Cybulski - All rights Reserved");
             })}
           </article>
         )

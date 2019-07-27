@@ -14,8 +14,8 @@ const ExchangeAbilities = () => (
     `}
   >
     {({ loading, error, data }) => {
-      if (loading) return <p>Loading...</p>;
-      if (error) return <p>Error </p>;
+      if (loading) return <div className='loadercontainer'><div className='loader'></div></div>
+      if (error) return <p>Error :-( </p> 
 
       return data.abilitieses.map(
         ({ id, text }) => (

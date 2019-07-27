@@ -15,6 +15,8 @@ import './App.css';
 class App extends Component {
   render() {
     return (
+        <>
+        <div id='loader'></div>
         <HashRouter>
         <NavBar />
         <div className="content" id="content">
@@ -26,6 +28,7 @@ class App extends Component {
             <Route path="/socials" component={Socials}/>
         </div>
         </HashRouter>
+        </>
     );
   }
 }

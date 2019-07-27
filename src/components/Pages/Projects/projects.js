@@ -23,6 +23,9 @@ class Projects extends Component {
             .set(".active",{backgroundColor:"#4d4d4d"})
             .to("#header",2,{x:0,color:"#28ff00"})
     }
+    componentWillUnmount() {
+    this.componentMounted = false;
+  }
   render() {
 
     var currentLocation = 1;

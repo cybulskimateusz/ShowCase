@@ -32,3 +32,8 @@
 .text_header b{
     font-size:  1.1em;
 }
+@media screen and (orientation:portrait){
+    #header{
+        display: none;
+    }
+}

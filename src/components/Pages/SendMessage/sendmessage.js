@@ -1,15 +1,10 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import lateRealisticTyper from "../../lateRealisticTyper";
 import Header from "../../Header/Header";
 import { TimelineMax } from "gsap";
 import Terminal from "terminal-in-react";
 import "./sendmessage.css";
 import axios from 'axios'
 
-const tl = new TimelineMax();
-
-var width = window.innerWidth;
 class SendMessage extends Component {
   constructor() {
     super();
@@ -18,9 +13,9 @@ class SendMessage extends Component {
       message: ""
     };
   }
-    componentDidCatch(error, info){
-        console.log(error)
-    }
+    componentWillUnmount() {
+    this.componentMounted = false;
+  }
     componentDidMount=()=>{
         const tl = new TimelineMax()
         tl
@@ -38,7 +33,6 @@ class SendMessage extends Component {
     return (
       <>
         <Header preText="" text="sendMessage()" postText="_" />
-        <div>
           <Terminal
             descriptions={{
         'send':'send message',
@@ -73,7 +67,7 @@ class SendMessage extends Component {
               },
               resume: {
                 method: (args, print, runCommand) => {
-                  if (this.state.email != "") {
+                  if (this.state.email !== "") {
                       axios.post("https://app.99inbound.com/api/e/4ieHVnW2",{
                         message:`User >>>${this.state.email.toString()}<<< asked for your resume`
                     })
@@ -128,7 +122,6 @@ class SendMessage extends Component {
               } else print(`-PassedThrough:${cmd}: is not correct`);
             }}
           />
-        </div>
       </>
     );
   }

@@ -1,20 +1,18 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import Header from "../../Header/Header";
 import { TimelineMax } from "gsap";
 import "./socials.css";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 import ExchangeSocials from "./ExchangeSocials";
-const tl = new TimelineMax();
 
 const client = new ApolloClient({
   uri: "https://api-euwest.graphcms.com/v1/cjxlm9rgg00bi01hwbfp58wps/master"
 });
 
 class Socials extends Component {
-  componentDidCatch(error, info) {
-    console.log(error);
+  componentWillUnmount() {
+    this.componentMounted = false;
   }
   componentDidMount = () => {
     const tl = new TimelineMax();
@@ -89,17 +87,16 @@ class Socials extends Component {
           >
             &lt;
           </p>
-          <ApolloProvider client={client}>
-            <ul className="contacts">
+          <ul className="contacts" >
               <li className="contact">
-                <a className="contact_a" id="contact_a" href="#">
-                  <span className="cell" />
-                  <span className="cell" />
-                  <span className="cell" />
-                  <span className="cell" />
-                  <span className="cell" />
-                  <span className="cell" />
-                  <span className="cell" />
+                <a className="contact_a" id="contact_a" href="tel:730345312">
+                  <span className="cell" >c</span>
+                  <span className="cell" >a</span>
+                  <span className="cell" >l</span>
+                  <span className="cell" >l</span>
+                  <span className="cell" > </span>
+                  <span className="cell" >m</span>
+                  <span className="cell" >e</span>
                   <span className="cell" />
                   <span className="cell" />
                   <span className="cell" />
@@ -107,7 +104,8 @@ class Socials extends Component {
                 </a>
               </li>
             </ul>
-            <ul id="values">
+          <ApolloProvider client={client}>
+            <ul id="values" key="1">
               <ExchangeSocials />
             </ul>
           </ApolloProvider>
