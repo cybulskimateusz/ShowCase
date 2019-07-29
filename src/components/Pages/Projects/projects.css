@@ -115,7 +115,8 @@
         margin: 32vh 1vw;
     }
     .about_project h1{
-        background-color: white;
+        background-color: #fff;
+        color:#4d4d4d;
         font-size: 2em;
         margin-top:13vh;
         position: absolute;
