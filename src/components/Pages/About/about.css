@@ -100,6 +100,7 @@
     }
     .name, .surname, .age, .city{
         animation: none;
+        display: inline;
     }
     #personal_data{
         animation: 20s slideleft linear 2s both infinite;
