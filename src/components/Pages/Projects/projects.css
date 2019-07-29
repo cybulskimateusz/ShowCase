@@ -81,7 +81,7 @@
     animation: showfirst 1s linear both;
 }
 @media screen and (max-width:920px){
-    .projcts{
+    .projects{
         width: 90vw;
     }
     .project{
