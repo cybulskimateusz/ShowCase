@@ -79,3 +79,41 @@
         transform: translateY(0)
     }
 }
+@media screen and (max-width:920px){
+    #hello_world h1{
+        font-size: 0.6em;
+    }
+    #hello_world p{
+        font-size: 0.4em;
+    }
+    #hello_world{
+        height: 60%;
+        left: 8%;
+        width: 80%;
+    }
+    #about_header{
+        margin-bottom: 10px;
+    }
+    .profile_picture{
+        height: 30vh;
+        margin: 2.5vh auto 2.5vh auto;
+        width:30vh;
+    }
+    .name, .surname, .age, .city{
+        animation: none;
+    }
+    #personal_data{
+        animation: 20s slideleft linear 2s both infinite;
+    }
+    br{
+        display: none;
+    }
+    @keyframes slideleft{
+        from{
+            transform: translateX(100vw);
+        }
+        to{
+            transform: translateX(-100vw);
+        }
+    }
+}

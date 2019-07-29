@@ -41,7 +41,7 @@ class Abilities extends Component {
                 if(nextLocation>=0){
                 
                     if(currentLocation+2<abilities.length)
-                        tl.to(abilities[currentLocation+2],.3,{opacity:.1, y:240})
+                        tl.to(abilities[currentLocation+2],.3,{opacity:.0, y:240})
                         
                     if(currentLocation+1<abilities.length)
                         tl.to(abilities[currentLocation+1],.3,{opacity:.1, y:120})

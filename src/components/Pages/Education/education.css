@@ -1,7 +1,7 @@
 .education{
     margin: 1em auto auto 2em;
     line-height: 1em;
-    width: 100vw;
+    width: 85vw;
     height: 100vh;
 }
 .school{
@@ -9,6 +9,7 @@
     opacity: 1;
     position: absolute;
     transform: translateY(100vh);
+    max-width: 80vw;
 }
 .school:first-child{
     opacity: 1;
@@ -24,9 +25,20 @@
 }
 .date{
     font-weight: 100;
-    
+    font-size:1em;
 }
 .description{
     font-weight: 100;
     font-size: .8em;
+}
+
+@media screen and (max-width:970px){
+    .school{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:920px){
+    .education{
+        margin: 0 0 0 1vw;
+    }
 }

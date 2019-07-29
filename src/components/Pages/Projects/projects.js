@@ -45,7 +45,7 @@ class Projects extends Component {
                 .getElementById("projects")
                 .contains(document.querySelector(whereGo))
             ) {
-              tl.to(where, 0.2, { y: 300, opacity: 0,"z-index":0 }).to(whereGo, 0.2, {
+              tl.to(where, .5, { y: 1000, opacity: 0,"z-index":0 }).to(whereGo, .5, {
                 y: 0,
                 opacity: 1,
                 "z-index":1
@@ -69,7 +69,7 @@ class Projects extends Component {
                 .getElementById("projects")
                 .contains(document.querySelector(whereGo))
             ) {
-              tl.to(where, 0.2, { y: -300, opacity: 0, "z-index":0 }).to(whereGo, 0.2, {
+              tl.to(where, .5, { y: -1000, opacity: 0, "z-index":0 }).to(whereGo,.5, {
                 y: 0,
                 opacity: 1,
                 "z-index":1

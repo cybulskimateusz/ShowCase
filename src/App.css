@@ -3,7 +3,7 @@
   -moz-osx-font-smoothing: grayscale;
     border: 0;
     box-sizing: border-box;
-    font-family: "Consolas", "Courier New";
+    font-family: "Fira Code","Consolas", "Courier New";
     font-size: 30px;
     line-height: 1em;
     margin: 0;

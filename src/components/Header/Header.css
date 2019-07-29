@@ -32,7 +32,7 @@
 .text_header b{
     font-size:  1.1em;
 }
-@media screen and (orientation:portrait){
+@media screen and (max-width:920px){
     #header{
         display: none;
     }
