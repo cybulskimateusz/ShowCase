@@ -111,7 +111,7 @@
     }
     #personal_data{
         animation: 20s slideleft linear 2s both infinite;
-        bottom:1em;
+        bottom:0;
         display:inline-flex;
         width:200vw;
     }
