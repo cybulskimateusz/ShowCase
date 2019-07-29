@@ -117,4 +117,8 @@
         margin-top:13vh;
         position: absolute;
     }
+    #personal_data{
+        bottom: 5vh;
+        position: fixed; 
+    }
 }
