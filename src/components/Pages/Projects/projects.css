@@ -60,6 +60,7 @@
     width: 30%;
 }
 .project_picture{
+    border:1px solid lightgray;
     max-height: 30%;
     max-width: 100%;
     margin: auto;
