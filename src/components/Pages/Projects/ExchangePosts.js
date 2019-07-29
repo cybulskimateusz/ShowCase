@@ -16,9 +16,6 @@ const ExchangePosts = () => (
     image2{
       handle
     }
-    image3{
-      handle
-    }
     number
     link
   }
@@ -38,7 +35,6 @@ const ExchangePosts = () => (
                 
                 <img alt=""className="project_picture" src={`https://media.graphcms.com/${image1.handle}`}/>
                 <img alt=""className="project_picture" src={`https://media.graphcms.com/${image2.handle}`}/>
-                <img alt=""className="project_picture" src={`https://media.graphcms.com/${image3.handle}`}/>
 
                 </div>
                 <div className="about_project">                
