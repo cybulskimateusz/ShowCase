@@ -103,6 +103,7 @@
     }
     #personal_data{
         animation: 20s slideleft linear 2s both infinite;
+        width:auto;
     }
     br{
         display: none;
