@@ -98,6 +98,12 @@
         margin: 2.5vh auto 2.5vh auto;
         width:30vh;
     }
+#personal_data p{
+    display:inline;
+}
+#personal_data b{
+    display:inline;
+}
     .name, .surname, .age, .city{
         animation: none;
         display: inline;
