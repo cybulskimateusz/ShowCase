@@ -119,6 +119,7 @@
         color:#28ff00;
         font-size: 2em;
         margin-top:13vh;
+        max-width:80%;
         position: absolute;
     }
     #personal_data{
