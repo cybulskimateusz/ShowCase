@@ -98,12 +98,13 @@
         margin: 2.5vh auto 2.5vh auto;
         width:30vh;
     }
-#personal_data p{
-    display:inline;
-}
-#personal_data b{
-    display:inline;
-}
+    #personal_data p{
+        display:inline;
+        margin:0 1em;
+    }
+    #personal_data b{
+        display:inline;
+    }
     .name, .surname, .age, .city{
         animation: none;
         display: inline;
@@ -111,7 +112,7 @@
     #personal_data{
         animation: 20s slideleft linear 2s both infinite;
         display:inline-flex;
-        width:auto;
+        width:200vw;
     }
     br{
         display: none;
