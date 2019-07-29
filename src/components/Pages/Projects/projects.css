@@ -81,6 +81,9 @@
     animation: showfirst 1s linear both;
 }
 @media screen and (max-width:920px){
+    .projcts{
+        width: 90vw;
+    }
     .project{
         flex-direction: column;
         height: 100% !important;
