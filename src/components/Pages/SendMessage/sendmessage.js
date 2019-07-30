@@ -108,7 +108,7 @@ class SendMessage extends Component {
             }}
             color="#fff"
             id="form"
-            msg="To send me a mail you have to write your e-mail adress down here"
+            msg="To send me a mail, or get my resume you have to write your e-mail adress down here"
             commandPassThrough={(cmd, print) => {
               if (mailReg.test(cmd)) {
                 this.setState({ email: cmd });
