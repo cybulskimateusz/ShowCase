@@ -4,6 +4,8 @@ import { TimelineMax } from "gsap";
 import Terminal from "terminal-in-react";
 import "./sendmessage.css";
 import axios from 'axios'
+import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+
 
 class SendMessage extends Component {
   constructor() {
@@ -32,6 +34,8 @@ class SendMessage extends Component {
 
     return (
       <>
+        <ReactScrollWheelHandler downHandler={()=>{window.location.href="#/socials"}}
+ upHandler={()=>{window.location.href="#/education"}}>
         <Header preText="" text="sendMessage()" postText="_" />
           <Terminal
             descriptions={{
@@ -122,6 +126,7 @@ class SendMessage extends Component {
               } else print(`-PassedThrough:${cmd}: is not correct`);
             }}
           />
+ </ReactScrollWheelHandler>
       </>
     );
   }
