@@ -69,7 +69,7 @@ class Education extends Component{
                     
                 nextLocation++
              currentLocation++
-            }else{window.location.href="#/sendmessagre"}}}
+            }else{window.location.href="#/sendmessage"}}}
         >
             <Header preText="return " text="education" postText="_"/>
             <ul id="education" className="education">
