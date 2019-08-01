@@ -5,6 +5,8 @@ import "./socials.css";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 import ExchangeSocials from "./ExchangeSocials";
+import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+
 
 const client = new ApolloClient({
   uri: "https://api-euwest.graphcms.com/v1/cjxlm9rgg00bi01hwbfp58wps/master"
@@ -28,6 +30,8 @@ class Socials extends Component {
     var nextLocation = 1;
     return (
       <>
+        <ReactScrollWheelHandler upHandler={()=>{window.location.href="#/sendmessage"}}>
+        <div className="container">
         <Header preText="System.out.print( " text="contact" postText=" )_" />
         <div className="socials">
           <p
@@ -167,6 +171,8 @@ class Socials extends Component {
             &gt;
           </p>
         </div>
+          </div>
+          </ReactScrollWheelHandler>
       </>
     );
   }

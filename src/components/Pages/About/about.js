@@ -26,7 +26,7 @@ class About extends Component{
     render(){
     return (
         <ReactScrollWheelHandler downHandler={()=>{window.location.href="#/projects"}}>
-        <div className="about_container">
+        <div className="content">
         <ApolloProvider client={client}>
           <ExchangeAbout/>
         </ApolloProvider>
