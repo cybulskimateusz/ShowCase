@@ -50,7 +50,7 @@ class Projects extends Component {
                 .getElementById("projects")
                 .contains(document.querySelector(whereGo))
             ) {
-              tl.to(where, .5, { y: ((theHeight/10)*8), opacity: 1,"z-index":1 },"up").to(whereGo, .5, {
+              tl.to(where, .5, { y: ((theHeight/10)*9), opacity: 1,"z-index":1 },"up").to(whereGo, .5, {
                 y: 0,
                 opacity: 1,
                 "z-index":2
@@ -62,7 +62,7 @@ class Projects extends Component {
                 .contains(document.querySelector(whereGoNext))
             ){
                 tl.set(whereGoNext, {
-                y: ((theHeight/10)*8),
+                y: ((theHeight/10)*9),
                 opacity: 1,
                 "z-index":0
               },"up").to(whereGoNext,.5, {
@@ -93,7 +93,7 @@ class Projects extends Component {
                 .getElementById("projects")
                 .contains(document.querySelector(whereGo))
             ){
-              tl.to(where, .5, { y: -theHeight, opacity: 0, "z-index":0 },"down").set(whereGo,{opacity:1, y:((theHeight/10)*8)},"down").to(whereGo,.5, {
+              tl.to(where, .5, { y: -theHeight, opacity: 0, "z-index":0 },"down").set(whereGo,{opacity:1, y:((theHeight/10)*9)},"down").to(whereGo,.5, {
                 y: 0,
                 "z-index":2
               },"down")
@@ -107,7 +107,7 @@ class Projects extends Component {
                 opacity: 0,
                 "z-index":1
               },"down").to(whereGoNext,.5, {
-                y: ((theHeight/10)*8),
+                y: ((theHeight/10)*9),
                 opacity: 1,
                 "z-index":1
               },"down"
