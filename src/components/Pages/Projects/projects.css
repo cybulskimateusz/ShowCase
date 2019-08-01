@@ -16,7 +16,7 @@
     }
     to{
         opacity:1;
-        transform: translateY(70vh);
+        transform: translateY(90vh);
         z-index: 1;
     }
 }
@@ -96,6 +96,18 @@
     animation: showsecond 1s linear both;
 }
 @media screen and (max-width:920px){
+    
+@keyframes showsecond{
+    from{
+        opacity:0;
+        transform: translateY(1000px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(70vh);
+        z-index: 1;
+    }
+}
     .projects{
         width: 90vw;
     }

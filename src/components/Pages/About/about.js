@@ -4,6 +4,7 @@ import ApolloClient from "apollo-boost"
 import { ApolloProvider } from "react-apollo"
 import ExchangeAbout from "./ExchangeAbout"
 import { TimelineMax } from "gsap"
+import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 
 
 const client = new ApolloClient({

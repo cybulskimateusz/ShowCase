@@ -74,7 +74,7 @@ class Projects extends Component {
                 
               currentLocation--;
             } else {
-              return
+              window.location.href="/#"
             }
           }}
           downHandler={() => {
@@ -114,7 +114,7 @@ class Projects extends Component {
             )}
               currentLocation++;
             } else {
-              return
+              window.location.href="#/abilities"
             }
           }}
         >
