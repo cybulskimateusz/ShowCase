@@ -52,7 +52,7 @@ class Education extends Component{
                 nextLocation--
              currentLocation--
 
-        }}}
+        }else{window.location.href="#/abilities"}}}
         downHandler={() => {
             const schools = document.querySelectorAll(".school")
             
@@ -69,7 +69,7 @@ class Education extends Component{
                     
                 nextLocation++
              currentLocation++
-            }}}
+            }else{window.location.href="#/sendmessagre"}}}
         >
             <Header preText="return " text="education" postText="_"/>
             <ul id="education" className="education">
