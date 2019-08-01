@@ -61,7 +61,7 @@ class Abilities extends Component {
              currentLocation--
 
         }else{
-            return
+            window.location.href="#/projects"
         }}}
         downHandler={() => {
             tl.addLabel("down")
@@ -90,7 +90,8 @@ class Abilities extends Component {
                             
                 nextLocation++
                 currentLocation++
-            }}}
+            }else{window.location.href="#/education"}
+}}
         >
         <Header preText="SELECT * FROM " text="abilities" postText="_" />
         <div id="abilities_container">
