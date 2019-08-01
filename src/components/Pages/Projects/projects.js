@@ -12,6 +12,8 @@ const client = new ApolloClient({
 });
 const tl = new TimelineMax();
 
+var theHeight = window.innerHeight;
+
 class Projects extends Component {
     componentDidMount=()=>{
         const tl = new TimelineMax()
@@ -36,8 +38,11 @@ class Projects extends Component {
         <Header preText="import.all.my." text="projects" postText="_" />
         <ReactScrollWheelHandler
           upHandler={() => {
+            tl.addLabel("up")
             if (currentLocation <= nextLocation)
               nextLocation = currentLocation - 1;
+            
+            var whereGoNext = "#post_" + (currentLocation+1);
             var whereGo = "#post_" + nextLocation;
             var where = "#post_" + currentLocation;
             if (
@@ -45,35 +50,68 @@ class Projects extends Component {
                 .getElementById("projects")
                 .contains(document.querySelector(whereGo))
             ) {
-              tl.to(where, .5, { y: 1000, opacity: 0,"z-index":0 }).to(whereGo, .5, {
+              tl.to(where, .5, { y: ((theHeight/10)*8), opacity: 1,"z-index":1 },"up").to(whereGo, .5, {
                 y: 0,
                 opacity: 1,
-                "z-index":1
-              });
+                "z-index":2
+              },"up");
                 document.getElementById("post_1").style.animation = "null"
+                if (
+              document
+                .getElementById("projects")
+                .contains(document.querySelector(whereGoNext))
+            ){
+                tl.set(whereGoNext, {
+                y: ((theHeight/10)*8),
+                opacity: 1,
+                "z-index":0
+              },"up").to(whereGoNext,.5, {
+                y: theHeight,
+                opacity: 0,
+                "z-index":0
+              },"up"
+            )}
+                
               currentLocation--;
             } else {
               return
             }
           }}
           downHandler={() => {
-            document.getElementById("post_1").style.animation = "hidefirst .5s linear both"          
+            tl.addLabel("down")
+            document.getElementById("post_1").style.animation = "hidefirst 1s linear both"
+            document.getElementById("post_2").style.animation = "none"            
             if (currentLocation >= nextLocation)
               nextLocation = currentLocation + 1;
 
             var where = "#post_" + currentLocation;
             var whereGo = "#post_" + nextLocation;
+            var whereGoNext = "#post_" + (nextLocation+1);
 
-            if (
+            if(
               document
                 .getElementById("projects")
                 .contains(document.querySelector(whereGo))
-            ) {
-              tl.to(where, .5, { y: -1000, opacity: 0, "z-index":0 }).to(whereGo,.5, {
+            ){
+              tl.to(where, .5, { y: -theHeight, opacity: 0, "z-index":0 },"down").set(whereGo,{opacity:1, y:((theHeight/10)*8)},"down").to(whereGo,.5, {
                 y: 0,
+                "z-index":2
+              },"down")
+              if (
+              document
+                .getElementById("projects")
+                .contains(document.querySelector(whereGoNext))
+            ){
+                tl.set(whereGoNext, {
+                y: theHeight,
+                opacity: 0,
+                "z-index":1
+              },"down").to(whereGoNext,.5, {
+                y: ((theHeight/10)*8),
                 opacity: 1,
                 "z-index":1
-              });
+              },"down"
+            )}
               currentLocation++;
             } else {
               return
