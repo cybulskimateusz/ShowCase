@@ -33,6 +33,7 @@ class Abilities extends Component {
     return (
         <ReactScrollWheelHandler
             upHandler={() => {
+                tl.addLabel("up")
                 const abilities = document.querySelectorAll(".abilitie")
                 
                 if (currentLocation <= nextLocation)
@@ -41,20 +42,20 @@ class Abilities extends Component {
                 if(nextLocation>=0){
                 
                     if(currentLocation+2<abilities.length)
-                        tl.to(abilities[currentLocation+2],.3,{opacity:.0, y:240})
+                        tl.to(abilities[currentLocation+2],.1,{opacity:.0, y:240},"up")
                         
                     if(currentLocation+1<abilities.length)
-                        tl.to(abilities[currentLocation+1],.3,{opacity:.1, y:120})
+                        tl.to(abilities[currentLocation+1],.1,{opacity:.1, y:120},"up")
                         
                     tl
-                        .to(abilities[currentLocation],.3,{opacity:.2, y:60})
-                        .to(abilities[nextLocation],.3,{opacity:1, y:0})
+                        .to(abilities[currentLocation],.1,{opacity:.2, y:60},"up")
+                        .to(abilities[nextLocation],.1,{opacity:1, y:0},"up")
             
                     if(nextLocation-1>=0)
-                        tl.to(abilities[nextLocation-1],.4,{opacity:.3, y:-60})
+                        tl.to(abilities[nextLocation-1],.3,{opacity:.3, y:-60},"up")
                        
                     if(nextLocation-2>=0)
-                        tl.to(abilities[nextLocation-2],.5,{opacity:.1, y:-120})
+                        tl.to(abilities[nextLocation-2],.4,{opacity:.1, y:-120},"up")
                         
                 nextLocation--
              currentLocation--
@@ -63,6 +64,7 @@ class Abilities extends Component {
             return
         }}}
         downHandler={() => {
+            tl.addLabel("down")
             const abilities = document.querySelectorAll(".abilitie")
                      
             if (currentLocation >= nextLocation)
@@ -71,20 +73,20 @@ class Abilities extends Component {
             if(nextLocation<abilities.length) {
                      
                 if(currentLocation-2>=0)
-                    tl.to(abilities[currentLocation-2],.2,{opacity:0, y:-240})
+                    tl.to(abilities[currentLocation-2],.1,{opacity:0, y:-240},"down")
                         
                 if(currentLocation-1>=0)
-                    tl.to(abilities[currentLocation-1],.3,{opacity:.1, y:-120})
+                    tl.to(abilities[currentLocation-1],.1,{opacity:.1, y:-120},"down")
                        
                 tl
-                    .to(abilities[currentLocation],.4,{opacity:.3, y:-60})
-                    .to(abilities[nextLocation],.4,{opacity:1, y:0})
+                    .to(abilities[currentLocation],.1,{opacity:.3, y:-60},"down")
+                    .to(abilities[nextLocation],.1,{opacity:1, y:0},"down")
                 
                 if(nextLocation+1<=abilities.length-1)
-                            tl.to(abilities[nextLocation+1],.4,{opacity:.3, y:60})
+                            tl.to(abilities[nextLocation+1],.1,{opacity:.3, y:60},"down")
                         
                  if(nextLocation+2<=abilities.length-1)
-                            tl.to(abilities[nextLocation+2],.4,{opacity:.1, y:120})
+                            tl.to(abilities[nextLocation+2],.3,{opacity:.1, y:120},"down")
                             
                 nextLocation++
                 currentLocation++
