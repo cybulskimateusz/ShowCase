@@ -15,6 +15,13 @@ const tl = new TimelineMax();
 var theHeight = window.innerHeight;
 
 class Projects extends Component {
+    constructor(props) {
+      super(props);
+		
+      this.state = {
+        isMount: false,
+      }
+   }
     componentDidMount=()=>{
         const tl = new TimelineMax()
         tl
@@ -24,6 +31,13 @@ class Projects extends Component {
             .set("#header",{x:-600,opacity:1},"-=1")
             .set(".active",{backgroundColor:"#4d4d4d"})
             .to("#header",2,{x:0,color:"#28ff00"})
+        
+        setTimeout(function(){
+            this.setState({
+            isMount:true
+        })
+        }.bind(this),1000)
+        
     }
     componentWillUnmount() {
     this.componentMounted = false;
@@ -74,7 +88,9 @@ class Projects extends Component {
                 
               currentLocation--;
             } else {
-              window.location.href="/#"
+              if(this.state.isMount){
+                  window.location.href="/#"
+              }
             }
           }}
           downHandler={() => {
@@ -114,7 +130,9 @@ class Projects extends Component {
             )}
               currentLocation++;
             } else {
-              window.location.href="#/abilities"
+              if(this.state.isMount){
+                  window.location.href="#/abilities"
+              }
             }
           }}
         >

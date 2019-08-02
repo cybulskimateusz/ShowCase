@@ -4,7 +4,9 @@ import ApolloClient from "apollo-boost"
 import { ApolloProvider } from "react-apollo"
 import ExchangeAbout from "./ExchangeAbout"
 import { TimelineMax } from "gsap"
-import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+import ReactScrollWheelHandler from "react-scroll-wheel-handler"
+import eventFire from '../../eventFire'
+import $ from 'jquery'
 
 
 const client = new ApolloClient({
@@ -25,7 +27,9 @@ class About extends Component{
     
     render(){
     return (
-        <ReactScrollWheelHandler downHandler={()=>{window.location.href="#/projects"}}>
+        <ReactScrollWheelHandler downHandler={()=>{
+        window.location.href = "#/projects"
+    }}>
         <div className="content">
         <ApolloProvider client={client}>
           <ExchangeAbout/>

@@ -30,7 +30,9 @@ class Socials extends Component {
     var nextLocation = 1;
     return (
       <>
-        <ReactScrollWheelHandler upHandler={()=>{window.location.href="#/sendmessage"}}>
+        <ReactScrollWheelHandler upHandler={()=>{
+        window.location.href="#/sendmessage"
+    }}>
         <div className="container">
         <Header preText="System.out.print( " text="contact" postText=" )_" />
         <div className="socials">

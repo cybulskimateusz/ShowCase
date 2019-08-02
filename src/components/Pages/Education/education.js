@@ -16,10 +16,18 @@ const client = new ApolloClient({
 });
 
 class Education extends Component{
+    constructor(props) {
+      super(props);
+		
+      this.state = {
+        isMount: false,
+      }
+   }
     componentWillUnmount() {
     this.componentMounted = false;
   }
     componentDidMount=()=>{
+        
         const tl = new TimelineMax()
         tl
             .set(".menu-li",{backgroundColor:"transparent",color:"#28ff00"})
@@ -28,6 +36,11 @@ class Education extends Component{
             .set("body",{color:"#28ff00"})
             .set("#header",{opacity:1})
             .set(".active",{backgroundColor:"#28ff00"})
+        setTimeout(function(){
+            this.setState({
+            isMount:true
+        })
+        }.bind(this),1000)
     }
     render(){
       
@@ -52,7 +65,10 @@ class Education extends Component{
                 nextLocation--
              currentLocation--
 
-        }else{window.location.href="#/abilities"}}}
+        }else{
+            if(this.state.isMount){
+            window.location.href="#/abilities"
+            }}}}
         downHandler={() => {
             const schools = document.querySelectorAll(".school")
             
@@ -69,7 +85,10 @@ class Education extends Component{
                     
                 nextLocation++
              currentLocation++
-            }else{window.location.href="#/sendmessage"}}}
+            }else{
+                if(this.state.isMount){
+                window.location.href="#/sendmessage"
+                }}}}
         >
             <Header preText="return " text="education" postText="_"/>
             <ul id="education" className="education">

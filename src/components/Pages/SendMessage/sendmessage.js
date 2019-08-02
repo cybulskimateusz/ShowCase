@@ -12,7 +12,8 @@ class SendMessage extends Component {
     super();
     this.state = {
       email: "",
-      message: ""
+      message: "",
+      isMount:false
     };
   }
     componentWillUnmount() {
@@ -27,6 +28,11 @@ class SendMessage extends Component {
             .set("body",{color:"#fff"})
             .set("#header",{opacity:1})
             .set(".active",{backgroundColor:"#fff"})
+    setTimeout(function(){
+            this.setState({
+            isMount:true
+        })
+        }.bind(this),1000)
     }
   render() {
 
@@ -34,8 +40,14 @@ class SendMessage extends Component {
 
     return (
       <>
-        <ReactScrollWheelHandler downHandler={()=>{window.location.href="#/socials"}}
- upHandler={()=>{window.location.href="#/education"}}>
+        <ReactScrollWheelHandler downHandler={()=>{
+        if(this.state.isMount){
+        window.location.href="#/socials"
+        }}}
+ upHandler={()=>{
+            if(this.state.isMount){
+            window.location.href="#/education"
+           }}}>
         <Header preText="" text="sendMessage()" postText="_" />
           <Terminal
             descriptions={{

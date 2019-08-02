@@ -12,6 +12,13 @@ const client = new ApolloClient({
 });
 const tl = new TimelineMax();
 class Abilities extends Component {
+    constructor(props) {
+      super(props);
+		
+      this.state = {
+        isMount: false,
+      }
+   }
     componentWillUnmount() {
         this.componentMounted = false;
     }
@@ -24,6 +31,11 @@ class Abilities extends Component {
             .set("body",{color:"#28ff00"})
             .set("#header",{opacity:1})
             .set(".active",{backgroundColor:"#28ff00"})
+        setTimeout(function(){
+            this.setState({
+            isMount:true
+        })
+        }.bind(this),1000)
     }
   render() {
       
@@ -61,8 +73,9 @@ class Abilities extends Component {
              currentLocation--
 
         }else{
+            if(this.state.isMount){
             window.location.href="#/projects"
-        }}}
+        }}}}
         downHandler={() => {
             tl.addLabel("down")
             const abilities = document.querySelectorAll(".abilitie")
@@ -90,7 +103,10 @@ class Abilities extends Component {
                             
                 nextLocation++
                 currentLocation++
-            }else{window.location.href="#/education"}
+            }else{
+                if(this.state.isMount){
+                window.location.href="#/education"
+                }}
 }}
         >
         <Header preText="SELECT * FROM " text="abilities" postText="_" />
