@@ -65,10 +65,9 @@ class Education extends Component{
                 nextLocation--
              currentLocation--
 
-        }else{
-            if(this.state.isMount){
+        }else if(this.state.isMount){
             window.location.href="#/abilities"
-            }}}}
+            }}}
         downHandler={() => {
             const schools = document.querySelectorAll(".school")
             
@@ -85,10 +84,9 @@ class Education extends Component{
                     
                 nextLocation++
              currentLocation++
-            }else{
-                if(this.state.isMount){
+            }else if(this.state.isMount){
                 window.location.href="#/sendmessage"
-                }}}}
+                }}}
         >
             <Header preText="return " text="education" postText="_"/>
             <ul id="education" className="education">
