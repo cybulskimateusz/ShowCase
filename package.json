@@ -13,7 +13,7 @@
     "react-dom": "^16.8.6",
     "react-realistic-typer": "^1.0.9",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "^3.0.1",
     "react-scroll-wheel-handler": "^1.0.9",
     "terminal-in-react": "^4.3.1"
   },
