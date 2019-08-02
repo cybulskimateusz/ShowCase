@@ -63,7 +63,8 @@ class Projects extends Component {
               document
                 .getElementById("projects")
                 .contains(document.querySelector(whereGo))
-            ) {
+                &&
+                this.state.isMount) {
               tl.to(where, .5, { y: ((theHeight/10)*9), opacity: 1,"z-index":1 },"up").to(whereGo, .5, {
                 y: 0,
                 opacity: 1,
@@ -87,10 +88,8 @@ class Projects extends Component {
             )}
                 
               currentLocation--;
-            } else {
-              if(this.state.isMount){
+            } else if(this.state.isMount){
                   window.location.href="/#"
-              }
             }
           }}
           downHandler={() => {
@@ -117,6 +116,8 @@ class Projects extends Component {
               document
                 .getElementById("projects")
                 .contains(document.querySelector(whereGoNext))
+                &&
+                this.state.isMount
             ){
                 tl.set(whereGoNext, {
                 y: theHeight,
@@ -129,11 +130,9 @@ class Projects extends Component {
               },"down"
             )}
               currentLocation++;
-            } else {
-              if(this.state.isMount){
+            } else if(this.state.isMount){
                   window.location.href="#/abilities"
               }
-            }
           }}
         >
           <div id="projects" className="projects">
