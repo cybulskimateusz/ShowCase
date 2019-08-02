@@ -5,8 +5,6 @@ import { ApolloProvider } from "react-apollo"
 import ExchangeAbout from "./ExchangeAbout"
 import { TimelineMax } from "gsap"
 import ReactScrollWheelHandler from "react-scroll-wheel-handler"
-import eventFire from '../../eventFire'
-import $ from 'jquery'
 
 
 const client = new ApolloClient({
