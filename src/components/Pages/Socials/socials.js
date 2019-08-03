@@ -172,21 +172,7 @@ class Socials extends Component {
           >
             -&gt;
           </p>
-          <p className="copy"
-              onClick={function(){
-                  try{
-                  var text = document.querySelector("#contact_a").getAttribute('href').split(':')[1]
-                  var textArea = document.createElement("textarea")
-                  textArea.className+="textarea"
-                  document.body.appendChild(textArea)
-                  textArea.value = text
-                  textArea.focus()
-                  textArea.select()
-                  document.execCommand("copy")
-                  document.body.removeChild(textArea)
-                  alert("Copied!")}catch(e){}
-              }}
-              >|| copy</p>
+          <p className="copy">|| copy</p>
         </div>
           </div>
           </ReactScrollWheelHandler>
