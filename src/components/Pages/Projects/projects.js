@@ -94,8 +94,11 @@ class Projects extends Component {
           }}
           downHandler={() => {
             tl.addLabel("down")
-            document.getElementById("post_1").style.animation = "hidefirst 1s linear both"
-            document.getElementById("post_2").style.animation = "none"            
+            try{
+                document.getElementById("post_1").style.animation = "hidefirst 1s linear both"
+                document.getElementById("post_2").style.animation = "none"   
+            }catch(e){}
+
             if (currentLocation >= nextLocation)
               nextLocation = currentLocation + 1;
 

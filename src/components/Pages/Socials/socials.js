@@ -40,7 +40,6 @@ class Socials extends Component {
             className="previous"
             id="previous"
             onClick={function() {
-                try{
               if (nextLocation >= currentLocation)
                 nextLocation = currentLocation - 1;
 
@@ -90,9 +89,9 @@ class Socials extends Component {
 
               nextLocation--;
               currentLocation--;
-            }catch(e){}}}
+            }}
           >
-            &lt;-
+            &lt;
           </p>
           <ul className="contacts" >
               <li className="contact">
@@ -120,8 +119,7 @@ class Socials extends Component {
             className="next"
             id="next"
             onClick={function() {
-                try{
-                    if (nextLocation <= currentLocation)
+              if (nextLocation <= currentLocation)
                 nextLocation = currentLocation + 1;
 
               var contact = document.querySelectorAll(".contactway");
@@ -170,24 +168,10 @@ class Socials extends Component {
 
               nextLocation++;
               currentLocation++;
-            }catch(e){}}}
+            }}
           >
-            -&gt;
+            &gt;
           </p>
-          <p className="copy"
-              onClick={function(){
-                  var text = document.querySelector("#contact_a").getAttribute('href').split(':')[1]
-                  var textArea = document.createElement("textarea")
-                  textArea.className+="textarea"
-                  document.body.appendChild(textArea)
-                  textArea.value = text
-                  textArea.focus()
-                  textArea.select()
-                  document.execCommand("copy")
-                  document.body.removeChild(textArea)
-                  alert("Copied!")
-              }}
-              >|| copy</p>
         </div>
           </div>
           </ReactScrollWheelHandler>

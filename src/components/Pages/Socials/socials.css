@@ -37,12 +37,14 @@
     z-index:1;
 }
 .previous{
+    animation: blink .5s both infinite;
     content: "<";
     cursor: pointer;
     font-size: 4em;
     margin: auto;
 }
 .next{
+    animation: blink .5s .3s both infinite;
     content: ">";
     cursor: pointer;
     font-size: 4em;
@@ -55,24 +57,21 @@
     height: 1em;
     margin-top: .1em;
 }
-.copy{
-    cursor:pointer;
-    position: absolute;
-    bottom: 30vh;
-    left: 25vw;
-}
-.textarea{
-   opacity:0;
-    width:1;
-    margin:;
-    padding:0;
-    height:1;
-    
+
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
 @media screen and (max-width:920px){
     .contacts{
         height: auto;
-        left: .5em;
     }
     .contact{
         font-size: 25px;
@@ -83,26 +82,13 @@
         font-size: 25px;
     }
     .previous{
-        bottom: 9em;
-        display: block;
         font-size: 25px;
-        left: 25vw;
-        position: fixed;
     }
     .next{
-        bottom: 9em;
-        display: block;
         font-size: 25px;
-        position: fixed;
-        right: 25vw;
     }
     .socials{
         width: 80vw;
         margin: auto auto auto 5vw;
-    }
-    .copy{
-        font-size: 20px;
-        bottom: 10.5em;
-        left: 1em;
     }
 }
