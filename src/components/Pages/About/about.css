@@ -13,7 +13,7 @@
     width: 100%;
 }
 .profile_picture{
-    animation: appear .5s linear 2s both;
+    animation: appear .5s linear .5s both;
     border-radius: 50%;
     height: 35vh;
     margin:10vh auto 5vh auto;
@@ -52,19 +52,19 @@
     font-size: 1em;
 }
 .name{
-    animation: slideup 2s linear 2.5s both;
+    animation: slideup 1s linear 1.5s both;
 }
 
 .surname{
-    animation: slideup 2s linear 3s both;
+    animation: slideup 1s linear 2s both;
 }
 
 .age{
-    animation: slideup 2s linear 3.5s both;
+    animation: slideup 1s linear 2.5s both;
 }
 
 .city{
-    animation: slideup 2s linear 4s both;
+    animation: slideup 1s linear 3s both;
 }
 
 @keyframes appear{
@@ -116,7 +116,7 @@
         display: inline;
     }
     #personal_data{
-        animation: 20s slideleft linear 2s both infinite;
+        animation: 20s slideleft linear 1s both infinite;
         bottom:0;
         display:inline-flex;
         width:200vw;
