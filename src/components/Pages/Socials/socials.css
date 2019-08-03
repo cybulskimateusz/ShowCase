@@ -80,18 +80,17 @@
         height: 25px;
         font-size: 25px;
     }
-    .previous{
-        bottom: 9em;
+    .previous,.next{
+        bottom: 6em;
         display: block;
         font-size: 25px;
+        position: absolute;
+    }
+    .previous{
         left: 25vw;
-        position: fixed;
+        
     }
     .next{
-        bottom: 9em;
-        display: block;
-        font-size: 25px;
-        position: fixed;
         right: 25vw;
     }
     .copy{
