@@ -174,6 +174,7 @@ class Socials extends Component {
           </p>
           <p className="copy"
               onClick={function(){
+                  try{
                   var text = document.querySelector("#contact_a").getAttribute('href').split(':')[1]
                   var textArea = document.createElement("textarea")
                   textArea.className+="textarea"
@@ -183,7 +184,7 @@ class Socials extends Component {
                   textArea.select()
                   document.execCommand("copy")
                   document.body.removeChild(textArea)
-                  alert("Copied!")
+                  alert("Copied!")}catch(e){}
               }}
               >|| copy</p>
         </div>
