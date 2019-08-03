@@ -1,6 +1,7 @@
 import { gql } from "apollo-boost";
 import { Query } from "react-apollo";
 import React from "react";
+import ReactDOM from "react-dom";
 import lateRealisticTyper from '../../lateRealisticTyper'
 import './about.css'
 
