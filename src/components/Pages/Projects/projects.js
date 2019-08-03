@@ -65,11 +65,11 @@ class Projects extends Component {
                 .contains(document.querySelector(whereGo))
                 &&
                 this.state.isMount) {
-              tl.to(where, .5, { y: ((theHeight/10)*9), opacity: 1,"z-index":1 },"up").to(whereGo, .5, {
+              tl.to(where, .2, { y: ((theHeight/10)*9), opacity: 1,"z-index":1 },"+=.1").to(whereGo, .5, {
                 y: 0,
                 opacity: 1,
                 "z-index":2
-              },"up");
+              });
                 document.getElementById("post_1").style.animation = "null"
                 if (
               document
@@ -80,7 +80,7 @@ class Projects extends Component {
                 y: ((theHeight/10)*9),
                 opacity: 1,
                 "z-index":0
-              },"up").to(whereGoNext,.5, {
+              },"up").to(whereGoNext,.1, {
                 y: theHeight,
                 opacity: 0,
                 "z-index":0
@@ -95,7 +95,7 @@ class Projects extends Component {
           downHandler={() => {
             tl.addLabel("down")
             try{
-                document.getElementById("post_1").style.animation = "hidefirst 1s linear both"
+                document.getElementById("post_1").style.animation = "hidefirst .5s linear both"
                 document.getElementById("post_2").style.animation = "none"   
             }catch(e){}
 
@@ -130,7 +130,7 @@ class Projects extends Component {
                 y: ((theHeight/10)*9),
                 opacity: 1,
                 "z-index":1
-              },"down"
+              }
             )}
               currentLocation++;
             } else if(this.state.isMount){
