@@ -91,7 +91,7 @@ class Socials extends Component {
               currentLocation--;
             }}
           >
-            &lt;-
+            &lt;
           </p>
           <ul className="contacts" >
               <li className="contact">
@@ -170,9 +170,8 @@ class Socials extends Component {
               currentLocation++;
             }}
           >
-            -&gt;
+            &gt;
           </p>
-          <p className="copy">|| copy</p>
         </div>
           </div>
           </ReactScrollWheelHandler>
