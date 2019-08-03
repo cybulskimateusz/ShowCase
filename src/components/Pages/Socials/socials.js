@@ -91,7 +91,7 @@ class Socials extends Component {
               currentLocation--;
             }}
           >
-            &lt;
+            &lt;-
           </p>
           <ul className="contacts" >
               <li className="contact">
@@ -170,8 +170,22 @@ class Socials extends Component {
               currentLocation++;
             }}
           >
-            &gt;
+            -&gt;
           </p>
+          <p className="copy"
+              onClick={function(){
+                  var text = document.querySelector("#contact_a").getAttribute('href').split(':')[1]
+                  var textArea = document.createElement("textarea")
+                  textArea.className+="textarea"
+                  document.body.appendChild(textArea)
+                  textArea.value = text
+                  textArea.focus()
+                  textArea.select()
+                  document.execCommand("copy")
+                  document.body.removeChild(textArea)
+                  alert("Copied!")
+              }}
+              >|| copy</p>
         </div>
           </div>
           </ReactScrollWheelHandler>
