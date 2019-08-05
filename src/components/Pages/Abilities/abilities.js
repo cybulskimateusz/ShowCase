@@ -25,9 +25,6 @@ class Abilities extends Component {
         const { top } = values;
         this.setState({ top });
     }
-    componentWillUnmount() {
-        this.componentMounted = false;
-    }
     componentDidMount=()=>{
         var li = document.querySelectorAll(".menu-li")
         const tl = new TimelineMax()

@@ -13,9 +13,6 @@ const client = new ApolloClient({
 });
 
 class Socials extends Component {
-  componentWillUnmount() {
-    this.componentMounted = false;
-  }
   componentDidMount = () => {
         var li = document.querySelectorAll(".menu-li")
     const tl = new TimelineMax();
@@ -184,7 +181,7 @@ class Socials extends Component {
                   textArea.select()
                   document.execCommand("copy")
                   document.body.removeChild(textArea)
-                  alert("Copied!")
+                  alert("Copied:"+text)
               }}
               >|| copy</p>
         </div>

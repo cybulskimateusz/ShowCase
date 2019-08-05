@@ -23,9 +23,6 @@ class Education extends Component{
         isMount: false,
       }
    }
-    componentWillUnmount() {
-    this.componentMounted = false;
-  }
     componentDidMount=()=>{
         var li = document.querySelectorAll(".menu-li")
         

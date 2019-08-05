@@ -12,9 +12,6 @@ const client = new ApolloClient({
 });
 
 class About extends Component{
-    componentWillMount() {
-        this.componentMounted = false;
-    }
     componentDidMount=()=>{
         var li = document.querySelectorAll(".menu-li")
         new TimelineMax()

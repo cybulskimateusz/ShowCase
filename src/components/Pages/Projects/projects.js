@@ -40,9 +40,6 @@ class Projects extends Component {
         }.bind(this),1000)
         
     }
-    componentWillUnmount() {
-    this.componentMounted = false;
-  }
   render() {
 
     var currentLocation = 1;
