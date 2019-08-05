@@ -71,6 +71,8 @@
 @media screen and (max-width:920px){
     .contacts{
         height: auto;
+        position: absolute;
+        bottom: 8em;
     }
     .contact{
         font-size: 25px;

@@ -181,7 +181,7 @@ class Socials extends Component {
                   textArea.select()
                   document.execCommand("copy")
                   document.body.removeChild(textArea)
-                  alert("Copied:"+text)
+                  alert("Copied!")
               }}
               >|| copy</p>
         </div>
