@@ -62,6 +62,11 @@
     .abilitie{
         font-size:0.6em;
     }
+    .abilitie:first-child::before{
+    height: 70vh;
+    display: block;
+    content: "";
+}
     .abilitie:last-child::after{
     height: 70vh;
     display: block;
