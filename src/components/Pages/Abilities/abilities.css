@@ -63,7 +63,7 @@
         font-size:0.6em;
     }
     .abilitie:first-child::before{
-    height: 50vh;
+    height: 20vh;
     display: block;
     content: "";
 }
