@@ -17,8 +17,9 @@ class Socials extends Component {
     this.componentMounted = false;
   }
   componentDidMount = () => {
+        var li = document.querySelectorAll(".menu-li")
     const tl = new TimelineMax();
-    tl.set(".menu-li", { backgroundColor: "transparent", color: "#28ff00" })
+    tl.set(li, { backgroundColor: "transparent", color: "#28ff00" })
       .set("html", { backgroundColor: "#000" })
       .set("#menu_text", { color: "#28ff00" })
       .set("body", { color: "#28ff00" })

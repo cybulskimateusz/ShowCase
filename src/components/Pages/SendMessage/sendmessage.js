@@ -20,9 +20,10 @@ class SendMessage extends Component {
     this.componentMounted = false;
   }
     componentDidMount=()=>{
+        var li = document.querySelectorAll(".menu-li")
         const tl = new TimelineMax()
         tl
-            .set(".menu-li",{backgroundColor:"transparent",color:"#fff"})
+            .set(li,{backgroundColor:"transparent",color:"#fff"})
             .set("html",{backgroundColor:"#000"})
             .set("#menu_text",{color:"#fff"})
             .set("body",{color:"#fff"})

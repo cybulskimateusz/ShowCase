@@ -23,9 +23,10 @@ class Projects extends Component {
       }
    }
     componentDidMount=()=>{
+        var li = document.querySelectorAll(".menu-li")
         const tl = new TimelineMax()
         tl
-            .set(".menu-li",{backgroundColor:"transparent",color:"#4d4d4d"})
+            .set(li,{backgroundColor:"transparent",color:"#4d4d4d"})
             .set("html",{backgroundColor:"#fff"})
             .set("#menu_text",{color:"#4d4d4d"})
             .set("#header",{x:-600,opacity:1},"-=1")
