@@ -50,6 +50,7 @@ class Education extends Component{
     return (
         <ReactScrollWheelHandler
             upHandler={() => {
+        if(this.state.isMount){
                 const schools = document.querySelectorAll(".school")
                 
                 if (currentLocation <= nextLocation)
@@ -66,10 +67,10 @@ class Education extends Component{
              currentLocation--
 
         }else{
-            if(this.state.isMount){
             window.location.href="#/abilities"
             }}}}
         downHandler={() => {
+            if(this.state.isMount){
             const schools = document.querySelectorAll(".school")
             
             if (currentLocation >= nextLocation)
@@ -86,7 +87,6 @@ class Education extends Component{
                 nextLocation++
              currentLocation++
             }else{
-                if(this.state.isMount){
                 window.location.href="#/sendmessage"
                 }}}}
         >

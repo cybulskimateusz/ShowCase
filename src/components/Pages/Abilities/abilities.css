@@ -3,49 +3,68 @@
     height: 100vh;
     position: absolute;
     width: 100%;
+    z-index: 0;
+}
+#abilities::before{
+    display: flex;
+    position: fixed;
     z-index: 1;
+    width:100vw;
+    height: 40vh;
+    bottom: auto;
+    background: -moz-linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.9) 70%,rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.9) 70%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.9) 70%,rgba(0,0,0,0) 100%);
+    content: "";
+}
+#abilities::after{
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    width:100vw;
+    height: 40vh;
+    top: 60vh;
+    background: -moz-linear-gradient(to top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.9) 70%,rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(to top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.9) 70%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.9) 70%,rgba(0,0,0,0) 100%);
+    content: "";
 }
 #abilities{
-    margin:5em auto;
-    position: relative;
+    position: absolute;
     text-align: center;
-    width:80%;
+    width: 100vw;
 }
 .abilitie{
     font-size: 2.3em;
     list-style-type: none;
     margin: 2em auto;
-    opacity: 0;
-    position: absolute;
-    transform: translateY(240px);
+    opacity: 1;
+    position: relative;
+    transform: translateY(30vh);
     width: 100%;
 }
-.abilitie:nth-child(1){
-    transform: translateY(0);
-    opacity:1;
-
-}.abilitie:nth-child(2){
-    transform: translateY(60px);    
-    opacity:.3;
-
-}.abilitie:nth-child(3){
-    transform: translateY(120px);
-    opacity:.1;
+.abilitie:last-child::after{
+    height: 50vh;
+    display: block;
+    content: "";
 }
 @media screen and (max-width:1200px){
     .abilitie{
         font-size:1.5em;
     }
-    #abilities{
-        margin: 30vh 5em auto auto;
-        position: static;
-    }
+    .abilitie:last-child::after{
+    height: 70vh;
+    display: block;
+    content: "";
+}
 }
 @media screen and (max-width:920px){
     .abilitie{
         font-size:0.6em;
     }
-    #abilities{
-        margin: 40vh 5em auto auto;
-    }
+    .abilitie:last-child::after{
+    height: 70vh;
+    display: block;
+    content: "";
+}
 }
