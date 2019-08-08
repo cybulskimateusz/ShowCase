@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import './NavBar.css';
 import {NavLink} from "react-router-dom";
-import lateRealisticTyper from '../lateRealisticTyper';
+import lateRealisticTyper from '../../global/lateRealisticTyper'
 import ReactDOM from 'react-dom';
 
 class NavBar extends Component{

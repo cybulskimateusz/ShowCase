@@ -1,7 +1,7 @@
-import { gql } from "apollo-boost";
-import { Query } from "react-apollo";
-import React from "react";
-import lateRealisticTyper from '../../lateRealisticTyper'
+import { gql } from "apollo-boost"
+import { Query } from "react-apollo"
+import React from "react"
+import lateRealisticTyper from '../../../global/lateRealisticTyper'
 import './about.css'
 
 const ExchangeAbout = () => (

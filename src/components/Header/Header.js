@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import '../../App.css';
-import lateRealisticTyper from '../lateRealisticTyper';
+import lateRealisticTyper from '../../global/lateRealisticTyper'
 
 function Header({preText, text, postText, color}){
     let pretext = ''+preText+'';
