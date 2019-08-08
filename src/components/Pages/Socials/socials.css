@@ -24,7 +24,6 @@
     position: relative;
 }
 .contact{
-    color: #28ff00;
     font-size: 4em;
     list-style: none;
     opacity: 0;
@@ -49,7 +48,7 @@
     margin: auto;
 }
 .contact a{
-    color: #28ff00;
+    color: inherit;
     display: inline-block;
     font-size: 1em;
     height: 1em;

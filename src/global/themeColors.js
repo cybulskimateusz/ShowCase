@@ -11,7 +11,7 @@ var switchColor = (expr) => {
         case 'black':
             return '#000'
         default:
-            return '#000'
+            return expr
     }
 }
 
