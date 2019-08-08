@@ -6,6 +6,7 @@ import { ApolloProvider } from "react-apollo"
 import ExchangeSocials from "./ExchangeSocials"
 import ReactScrollWheelHandler from "react-scroll-wheel-handler"
 import themeColors from '../../../global/themeColors'
+import matrixRewrite from '../../../global/matrixRewrite'
 
 
 const client = new ApolloClient({
@@ -56,25 +57,7 @@ class Socials extends Component {
                 return result;
               }
 
-              var starttime = 0;
-              var maxtime = 500;
-
-              for (var i = 0; i <= 10; i++) {
-                (function(i) {
-                  for (var j = starttime; j <= maxtime; j += 100) {
-                    if (j < maxtime)
-                      setTimeout(function() {
-                        cell[i].innerHTML = makeid(1);
-                      }, j);
-                    else
-                      setTimeout(function() {
-                        cell[i].innerHTML = name.charAt(i);
-                      }, j);
-                  }
-                })(i, maxtime);
-                starttime += 100;
-                maxtime += 100;
-              }
+              matrixRewrite(0, 500, cell, makeid, name)
 
               document.querySelector("#contact_a").href = href;
 
@@ -138,22 +121,7 @@ class Socials extends Component {
               var starttime = 0;
               var maxtime = 500;
 
-              for (var i = 0; i <= 10; i++) {
-                (function(i) {
-                  for (var j = starttime; j <= maxtime; j += 100) {
-                    if (j < maxtime)
-                      setTimeout(function() {
-                        cell[i].innerHTML = makeid(1);
-                      }, j);
-                    else
-                      setTimeout(function() {
-                        cell[i].innerHTML = name.charAt(i);
-                      }, j);
-                  }
-                })(i, maxtime);
-                starttime += 100;
-                maxtime += 100;
-              }
+              matrixRewrite(0, 500, cell, makeid, name)
 
               document.querySelector("#contact_a").href = href;
 
