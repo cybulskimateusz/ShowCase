@@ -1,5 +1,5 @@
 function matrixRewrite(starttime, maxtime, cell, makeid, name){
-    for (var i = 0; i <= 10; i++) {
+    for (var i = 0; i < cell.length; i++) {
                 (function(i) {
                   for (var j = starttime; j <= maxtime; j += 100) {
                     if (j < maxtime)

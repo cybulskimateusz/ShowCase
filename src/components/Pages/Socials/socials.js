@@ -118,9 +118,6 @@ class Socials extends Component {
                 return result;
               }
 
-              var starttime = 0;
-              var maxtime = 500;
-
               matrixRewrite(0, 500, cell, makeid, name)
 
               document.querySelector("#contact_a").href = href;
