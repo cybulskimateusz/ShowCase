@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import Header from "../../Header/Header";
-import { TimelineMax } from "gsap";
-import Terminal from "terminal-in-react";
-import "./sendmessage.css";
+import React, { Component } from "react"
+import Header from "../../Header/Header"
+import Terminal from "terminal-in-react"
+import "./sendmessage.css"
 import axios from 'axios'
-import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+import ReactScrollWheelHandler from "react-scroll-wheel-handler"
+import themeColors from '../../../global/themeColors'
 
 
 class SendMessage extends Component {
@@ -17,15 +17,9 @@ class SendMessage extends Component {
     };
   }
     componentDidMount=()=>{
-        var li = document.querySelectorAll(".menu-li")
-        const tl = new TimelineMax()
-        tl
-            .set(li,{backgroundColor:"transparent",color:"#fff"})
-            .set("html",{backgroundColor:"#000"})
-            .set("#menu_text",{color:"#fff"})
-            .set("body",{color:"#fff"})
-            .set("#header",{opacity:1})
-            .set(".active",{backgroundColor:"#fff"})
+        
+        themeColors('black','white',2)
+        
     setTimeout(function(){
             this.setState({
             isMount:true

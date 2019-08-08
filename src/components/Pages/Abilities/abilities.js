@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import "./abilities.css";
-import Header from "../../Header/Header";
-import ExchangeAbilities from "./ExchangeAbilities";
-import ApolloClient from "apollo-boost";
-import { ApolloProvider } from "react-apollo";
-import { TimelineMax } from "gsap";
-import { Scrollbars } from 'react-custom-scrollbars';
-import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+import React, { Component } from "react"
+import "./abilities.css"
+import Header from "../../Header/Header"
+import ExchangeAbilities from "./ExchangeAbilities"
+import ApolloClient from "apollo-boost"
+import { ApolloProvider } from "react-apollo"
+import { Scrollbars } from 'react-custom-scrollbars'
+import ReactScrollWheelHandler from "react-scroll-wheel-handler"
+import themeColors from '../../../global/themeColors'
 
 const client = new ApolloClient({
   uri: "https://api-euwest.graphcms.com/v1/cjxlm9rgg00bi01hwbfp58wps/master"
@@ -21,24 +21,20 @@ class Abilities extends Component {
         };
         this.handleUpdate = this.handleUpdate.bind(this);
     }
+    
     handleUpdate(values) {
         const { top } = values;
         this.setState({ top });
     }
+    
     componentDidMount=()=>{
-        var li = document.querySelectorAll(".menu-li")
-        const tl = new TimelineMax()
-        tl
-            .set(li,{backgroundColor:"transparent",color:"#28ff00"})
-            .set("html",{backgroundColor:"#000"})
-            .set("#menu_text",{color:"#28ff00"})
-            .set("body",{color:"#28ff00"})
-            .set("#header",{opacity:1})
-            .set(".active",{backgroundColor:"#28ff00"})
+        
+        themeColors('black', 'green', 2)
+        
         setTimeout(function(){
             this.setState({
-            isMount:true
-        })
+                isMount:true
+            })
         }.bind(this),1000)
     }
     render() {

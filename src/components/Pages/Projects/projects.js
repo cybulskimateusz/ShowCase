@@ -5,6 +5,7 @@ import ExchangePosts from "./ExchangePosts";
 import Header from "../../Header/Header";
 import "./projects.css";
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+import themeColors from '../../../global/themeColors'
 import { TimelineMax } from "gsap";
 
 const client = new ApolloClient({
@@ -23,15 +24,8 @@ class Projects extends Component {
       }
    }
     componentDidMount=()=>{
-        var li = document.querySelectorAll(".menu-li")
-        const tl = new TimelineMax()
-        tl
-            .set(li,{backgroundColor:"transparent",color:"#4d4d4d"})
-            .set("html",{backgroundColor:"#fff"})
-            .set("#menu_text",{color:"#4d4d4d"})
-            .set("#header",{x:-600,opacity:1},"-=1")
-            .set(".active",{backgroundColor:"#4d4d4d"})
-            .to("#header",2,{x:0,color:"#28ff00"})
+        
+        themeColors('white', 'gray', 1, 'green')
         
         setTimeout(function(){
             this.setState({

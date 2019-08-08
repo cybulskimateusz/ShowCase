@@ -3,8 +3,8 @@ import './about.css'
 import ApolloClient from "apollo-boost"
 import { ApolloProvider } from "react-apollo"
 import ExchangeAbout from "./ExchangeAbout"
-import { TimelineMax } from "gsap"
 import ReactScrollWheelHandler from "react-scroll-wheel-handler"
+import themeColors from '../../../global/themeColors'
 
 
 const client = new ApolloClient({
@@ -13,12 +13,7 @@ const client = new ApolloClient({
 
 class About extends Component{
     componentDidMount=()=>{
-        var li = document.querySelectorAll(".menu-li")
-        new TimelineMax()
-            .set(li,{backgroundColor:"transparent",color:"#4d4d4d"})
-            .set("html",{backgroundColor:"#fff"})
-            .set("#menu_text",{color:"#4d4d4d"})
-            .set(".active",{backgroundColor:"#4d4d4d"})
+        themeColors('white', 'gray')
     }
     
     render(){

@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import Header from "../../Header/Header";
-import { TimelineMax } from "gsap";
-import "./socials.css";
-import ApolloClient from "apollo-boost";
-import { ApolloProvider } from "react-apollo";
-import ExchangeSocials from "./ExchangeSocials";
-import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+import React, { Component } from "react"
+import Header from "../../Header/Header"
+import "./socials.css"
+import ApolloClient from "apollo-boost"
+import { ApolloProvider } from "react-apollo"
+import ExchangeSocials from "./ExchangeSocials"
+import ReactScrollWheelHandler from "react-scroll-wheel-handler"
+import themeColors from '../../../global/themeColors'
 
 
 const client = new ApolloClient({
@@ -14,14 +14,7 @@ const client = new ApolloClient({
 
 class Socials extends Component {
   componentDidMount = () => {
-        var li = document.querySelectorAll(".menu-li")
-    const tl = new TimelineMax();
-    tl.set(li, { backgroundColor: "transparent", color: "#28ff00" })
-      .set("html", { backgroundColor: "#000" })
-      .set("#menu_text", { color: "#28ff00" })
-      .set("body", { color: "#28ff00" })
-      .set("#header", { opacity: 1 })
-      .set(".active", { backgroundColor: "#28ff00" });
+      themeColors('black','green',2)
   };
   render() {
     var currentLocation = 0;
