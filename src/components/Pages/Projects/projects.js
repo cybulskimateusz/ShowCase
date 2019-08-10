@@ -103,7 +103,7 @@ class Projects extends Component {
                 .getElementById("projects")
                 .contains(document.querySelector(whereGo))
             ){
-              tl.to(where, .5, { y: -theHeight, opacity: 0, "z-index":0 },"down").set(whereGo,{opacity:1, y:((theHeight/10)*9)},"down").to(whereGo,.5, {
+              tl.to(where, .5, { y: -theHeight, opacity: 0, "z-index":0 },"down").set(whereGo,{opacity:1, y:((theHeight/10)*95)},"down").to(whereGo,.5, {
                 y: 0,
                 "z-index":2
               },"down")
@@ -119,7 +119,7 @@ class Projects extends Component {
                 opacity: 0,
                 "z-index":1
               },"down").to(whereGoNext,.5, {
-                y: ((theHeight/10)*9),
+                y: ((theHeight/10)*95),
                 opacity: 1,
                 "z-index":1
               }
