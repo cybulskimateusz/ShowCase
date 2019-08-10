@@ -22,10 +22,10 @@ const ExchangeEducation = () => (
 
       return data.educations.map(
         ({ id, school, date, more}) => (
-         <li className="school" key={id}>
-            <p className="schoolname">{school}</p>
-            <p className="date">{date}</p>
-            <p className="description">{more}</p>
+         <li className="school w-75 ml-lg-5" key={id}>
+            <h2 className="schoolname font-weight-bolder">{school}</h2>
+            <h2 className="date">{date}</h2>
+            <h3 className="description font-weigh-lighter">{more}</h3>
             </li>
         )
       );

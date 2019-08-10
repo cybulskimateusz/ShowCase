@@ -1,10 +1,4 @@
-#abilities_container{
-    display: flex;
-    height: 100vh;
-    position: absolute;
-    width: 100%;
-    z-index: 0;
-}
+
 #abilities::before{
     display: flex;
     position: fixed;
@@ -29,19 +23,12 @@
     background: linear-gradient(to top, rgba(0,0,0,1) 0%,rgba(0,0,0,0.9) 70%,rgba(0,0,0,0) 100%);
     content: "";
 }
-#abilities{
-    position: absolute;
-    text-align: center;
-    width: 100vw;
-}
 .abilitie{
-    font-size: 2.3em;
+    font-size: 4.5em;
     list-style-type: none;
     margin: 2em auto;
     opacity: 1;
-    position: relative;
     transform: translateY(30vh);
-    width: 100%;
 }
 .abilitie:last-child::after{
     height: 50vh;

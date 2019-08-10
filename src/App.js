@@ -17,7 +17,6 @@ class App extends Component {
     return (
         <>
         <HashRouter>
-        <NavBar />
         <div className="content" id="content">
             <Route exact path="/" component={About}/>
             <Route path="/projects" component={Projects}/>
@@ -26,6 +25,7 @@ class App extends Component {
             <Route path="/sendmessage" component={SendMessage}/>
             <Route path="/socials" component={Socials}/>
         </div>
+        <NavBar />
         </HashRouter>
         </>
     );

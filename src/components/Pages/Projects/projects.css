@@ -1,7 +1,7 @@
 @keyframes showfirst{
     from{
         opacity:0;
-        transform: translateY(1000px);
+        transform: translateY(100vh);
     }
     to{
         opacity:1;
@@ -12,7 +12,7 @@
 @keyframes showsecond{
     from{
         opacity:0;
-        transform: translateY(1000px);
+        transform: translateY(100vh);
     }
     to{
         opacity:1;
@@ -27,67 +27,20 @@
     }
     to{
         opacity:0;
-        transform: translateY(-1000px);
+        transform: translateY(-100vh);
         z-index: 0;
     }
 }
 
 .project_container{
-    display: block;
-    height: 100%;
-    margin:0;
-    overflow-y: hidden;
-    padding: 0;
-    width: 100%;
     z-index: 0;
-    position: absolute;
     opacity: 0;
-}
-.projects{
-    color: #4d4d4d;
-    display:block;
-    height: 100%;
-    margin: 0;
-    overflow-y: hidden;
-    position: absolute;
-    width: 100%;
 }
 .project{
     color: #4d4d4d;
-    cursor: pointer;
-    display:flex;
-    height: 90% !important; 
-    margin: 2.5% 7.5%;
-    overflow-y:hidden;
-    position: relative;
-    width: 75% !important;
-}
-
-.photo_container{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    margin:0 auto 0 0;
-    width: 30%;
 }
 .project_picture{
-    border:1px solid lightgray;
-    max-height: 30%;
-    max-width: 100%;
-    margin: auto;
     object-fit: cover;
-}
-.about_project{
-    float:left;
-    height: 100%;
-    margin: 0 0 0 5%;
-    width: 65%;
-}
-.about_project p{
-    font-size: 0.7em;
-}
-.about_project h1{
-    font-size: 1.5em;
 }
 .project_container:nth-child(1){
     animation: showfirst 1s linear both;
@@ -95,12 +48,12 @@
 .project_container:nth-child(2){
     animation: showsecond 1s linear both;
 }
-@media screen and (max-width:920px){
+@media screen and (max-width:768px){
     
 @keyframes showsecond{
     from{
         opacity:0;
-        transform: translateY(1000px);
+        transform: translateY(100vh);
     }
     to{
         opacity:1;
@@ -108,34 +61,11 @@
         z-index: 1;
     }
 }
-    .projects{
+    .projects,.photo_container,.about_project{
         width: 90vw;
-    }
-    .project{
-        flex-direction: column;
-        height: 100% !important;
-        width: 100vw !important;
-        margin: 1vh 0;
-    }
-    .project_picture{
-        display: none;
-    }
-    .project_picture:nth-child(1){
-        display: block;
-        width: 100vw;
-        min-height: 100%;
-    }
-    .photo_container{
-        display: block;
-        height:30vh;
-        width: 90vw;
-        margin: 0 auto 0 1vw;
     }
     .about_project{
-        font-size: 17px;
-        margin:0;
-        position: absolute;
-        width: 90vw;
+        position: absolute !important;
     }
     .about_project p{
         font-size: 0.8em;
@@ -146,11 +76,6 @@
         color:#28ff00;
         font-size: 2em;
         margin-top:13vh;
-        max-width:80%;
         position: absolute;
-    }
-    #personal_data{
-        bottom: 5vh;
-        position: fixed; 
     }
 }

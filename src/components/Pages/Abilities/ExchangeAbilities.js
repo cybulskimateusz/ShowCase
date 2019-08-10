@@ -19,7 +19,7 @@ const ExchangeAbilities = () => (
 
       return data.abilitieses.map(
         ({ id, text }) => (
-            <li className="abilitie" key={id}>{text}</li>
+            <li className="abilitie position-relative w-100" key={id}>{text}</li>
         )
       );
     }}

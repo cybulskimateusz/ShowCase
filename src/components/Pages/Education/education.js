@@ -83,7 +83,7 @@ class Education extends Component{
                 }}}}
         >
             <Header preText="return " text="education" postText="_"/>
-            <ul id="education" className="education">
+            <ul id="education" className="education my-0 mr-0 ml-1 mt-lg-2 mr-lg-auto mb-lg-auto ml-lg-5">
             <ApolloProvider client={client}>
               <ExchangeEducation />
             </ApolloProvider>

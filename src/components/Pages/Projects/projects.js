@@ -46,7 +46,7 @@ class Projects extends Component {
           upHandler={() => {
             tl.addLabel("up")
             if (currentLocation <= nextLocation)
-              nextLocation = currentLocation - 1;
+              nextLocation = currentLocation - 1
             
             var whereGoNext = "#post_" + (currentLocation+1);
             var whereGo = "#post_" + nextLocation;
@@ -79,7 +79,7 @@ class Projects extends Component {
               },"up"
             )}
                 
-              currentLocation--;
+              currentLocation--
             } else if(this.state.isMount){
                   window.location.href="/#"
             }
@@ -130,7 +130,7 @@ class Projects extends Component {
               }
           }}
         >
-          <div id="projects" className="projects">
+          <div id="projects" className="projects p-0 h-100 d-block m-0 position-absolute overflow-hidden col-12">
             <ApolloProvider client={client}>
               <ExchangePosts />
             </ApolloProvider>

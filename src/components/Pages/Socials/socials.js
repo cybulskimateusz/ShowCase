@@ -25,11 +25,11 @@ class Socials extends Component {
         <ReactScrollWheelHandler upHandler={()=>{
         window.location.href="#/sendmessage"
     }}>
-        <div className="container">
+        <div className="fill-width">
         <Header preText="System.out.print( " text="contact" postText=" )_" />
-        <div className="socials">
+        <div className="socials ml-lg-5">
           <p
-            className="previous"
+            className="previous ml-5"
             id="previous"
             onClick={function() {
               if (nextLocation >= currentLocation)
@@ -67,20 +67,20 @@ class Socials extends Component {
           >
             &lt;-
           </p>
-          <ul className="contacts" >
-              <li className="contact">
+          <ul className="contacts p-0" >
+              <li className="contact ml-3">
                 <a className="contact_a" id="contact_a" href="tel:730345312">
-                  <span className="cell" >c</span>
-                  <span className="cell" >a</span>
-                  <span className="cell" >l</span>
-                  <span className="cell" >l</span>
-                  <span className="cell" > </span>
-                  <span className="cell" >m</span>
-                  <span className="cell" >e</span>
-                  <span className="cell" />
-                  <span className="cell" />
-                  <span className="cell" />
-                  <span className="cell" />
+                  <span className="cell d-inline-block" >c</span>
+                  <span className="cell d-inline-block" >a</span>
+                  <span className="cell d-inline-block" >l</span>
+                  <span className="cell d-inline-block" >l</span>
+                  <span className="cell d-inline-block" > </span>
+                  <span className="cell d-inline-block" >m</span>
+                  <span className="cell d-inline-block" >e</span>
+                  <span className="cell d-inline-block" />
+                  <span className="cell d-inline-block" />
+                  <span className="cell d-inline-block" />
+                  <span className="cell d-inline-block" />
                 </a>
               </li>
             </ul>
@@ -128,7 +128,7 @@ class Socials extends Component {
           >
             -&gt;
           </p>
-          <p className="copy"
+          <h1 className="copy"
               onClick={function(){
                   var text = document.querySelector("#contact_a").getAttribute('href').split(':')[1]
                   var textArea = document.createElement("textarea")
@@ -141,7 +141,7 @@ class Socials extends Component {
                   document.body.removeChild(textArea)
                   alert("Copied!")
               }}
-              >|| copy</p>
+              >|| copy</h1>
         </div>
           </div>
           </ReactScrollWheelHandler>

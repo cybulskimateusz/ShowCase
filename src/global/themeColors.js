@@ -15,7 +15,7 @@ var switchColor = (expr) => {
     }
 }
 
-function themeColors(bgColor, themeColor, headerAction, headerColor){
+function themeColors(bgColor, themeColor, headerAction, headerColor=themeColor){
     var tl      = new TimelineMax()
     
     var nav     = ['.menu-li', '#menu_text']
@@ -51,8 +51,7 @@ function themeColors(bgColor, themeColor, headerAction, headerColor){
         case 2:
             tl.set(header,{
                 opacity:1,
-                color:
-                    headerColor != null ? switchColor(headerColor) : switchColor(themeColor)
+                color:switchColor(headerColor)
             })
         break;
         default:

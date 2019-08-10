@@ -53,9 +53,9 @@ class Abilities extends Component {
                     }}}
             >
             <Header preText="SELECT * FROM " text="abilities" postText="_" />
-            <div id="abilities_container">
+            <div className="d-flex h-100 position-absolute w-100">
             <Scrollbars onUpdate={this.handleUpdate}>
-            <div id="abilities">
+            <div id="abilities" className="position-absolute text-center w-100">
                 <ApolloProvider client={client}>
                   <ExchangeAbilities />
                 </ApolloProvider>

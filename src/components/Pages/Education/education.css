@@ -9,7 +9,6 @@
     opacity: 1;
     position: absolute;
     transform: translateY(100vh);
-    max-width: 80vw;
 }
 .school:first-child{
     opacity: 1;
@@ -19,26 +18,9 @@
     opacity: 1;
     transform: translateY(45vh);
 }
-.schoolname{
-    font-size: 1.2em;
-    
-}
-.date{
-    font-weight: 100;
-    font-size:1em;
-}
-.description{
-    font-weight: 100;
-    font-size: .8em;
-}
 
-@media screen and (max-width:970px){
-    .school{
+@media screen and (max-width:768px){
+    .schoolname, .date, .description{
         font-size: 20px;
-    }
-}
-@media screen and (max-width:920px){
-    .education{
-        margin: 0 0 0 1vw;
     }
 }

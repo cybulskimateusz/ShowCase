@@ -1,65 +1,26 @@
 #menu{
-    display: flex;
-    flex-direction: column;
     height: 65%;
-    position: absolute;
     right: 5vw;
     top:15%;
     z-index: 2;
 }
 #menu ul{
-    display: flex;
-    flex-direction: column;
     height: 100%;
-    list-style: none;
     min-width: 50px;
 }
 .menu-li{
     border: 1px solid;
-    border-radius: 50%;
-    height: .5rem;
-    margin: auto 0 0 auto;
-    width: .5rem;
-    cursor: pointer;
+    height: .9rem;
+    width: .9rem;
 }
 #menu_text{
-    display: flex;
-    flex-direction: column;
     height: 65%;
-    position:absolute;
     right:7vw;
-    text-align: right;
     top:15%;
     z-index: 2;
 }
 .menu_text_li{
-    display: block;
-    font-size:0.4rem;
-    height: .5rem;
-    margin: auto 0 0 auto;
-    cursor: pointer;
-    list-style: none;
-}
-@media (any-hover:none),(any-pointer:coarse) and (max-width:920px){
-    #menu_text{
-        display: none;
-    }
-}
-@media screen and (max-width:920px){
-    #menu_text{
-        display: none;
-    }
-    .menu-li::before{
-        position: absolute;
-        display: block;
-        width: 1.5em;
-        height: 1.5em;
-        background-color: transparent;
-        z-index: 5;
-        content: "";
-        right: 0;
-        margin-top: -.5em;
-    }
+    height: 1rem;
 }
 @media screen and (orientation:portrait){
     #menu{

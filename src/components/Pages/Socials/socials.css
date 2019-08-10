@@ -2,12 +2,8 @@
     display: none;
 }
 .cell{
-    font-size: 3rem;
-    display: inline-block;
-    width: 2rem;
-}
-.content{
-    display: flex;
+    font-size: 6rem;
+    width: 4rem;
 }
 .socials{
     display: inline-flex;
@@ -15,16 +11,16 @@
     height: 90vh;
     margin:auto;
     position: relative;
-    width: 90vw;
+    width: 80vw;
 }
 .contacts{
     display: inline-block;
-    height: 4em;
+    height: 8em;
     margin:auto;
     position: relative;
 }
 .contact{
-    font-size: 4em;
+    font-size: 8em;
     list-style: none;
     opacity: 0;
     text-align: center;
@@ -54,11 +50,14 @@
     height: 1em;
     margin-top: .1em;
 }
+.contact a:hover{
+    color:#28ff00;
+}
 .copy{
     cursor:pointer;
     position: absolute;
-    bottom: 30vh;
-    left: 25vw;
+    bottom: 20vh;
+    left: 10vw;
 }
 .textarea{
    opacity:0;
@@ -67,11 +66,11 @@
     padding:0;
     height:1;  
 }
-@media screen and (max-width:920px){
+@media screen and (max-width:1200px){
     .contacts{
-        height: auto;
+        height: 2rem;
         position: absolute;
-        bottom: 8em;
+        top:40vh;
     }
     .contact{
         font-size: 25px;
@@ -87,20 +86,15 @@
         font-size: 25px;
         position: absolute;
     }
-    .previous{
-        left: 25vw;
-        
-    }
     .next{
         right: 25vw;
     }
     .copy{
         font-size: 20px;
-        bottom: 10em;
-        left: 1em;
+        bottom: 35vh;
+        left:2rem;
     }
     .socials{
         width: 80vw;
-        margin: auto auto auto 5vw;
     }
 }
