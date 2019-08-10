@@ -8,7 +8,7 @@ class NavBar extends Component{
     render(){
         return (
         <>
-        <nav id="menu" className=" d-flex flex-column position-absolute">
+        <nav id="menu" className=" d-flex flex-column position-fixed">
             <ul id="Nav"className="mb-0 d-flex flex-column list-group">
                 <NavLink className="menu-li mt-auto mr-0 mb-0 ml-auto rounded-circle" id="about_button" exact to="/"
                     onMouseEnter={
