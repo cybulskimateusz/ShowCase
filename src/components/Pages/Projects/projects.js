@@ -57,7 +57,7 @@ class Projects extends Component {
                 .contains(document.querySelector(whereGo))
                 &&
                 this.state.isMount) {
-              tl.to(where, .2, { y: ((theHeight/10)*9), opacity: 1,"z-index":1 },"+=.1").to(whereGo, .5, {
+              tl.to(where, .2, { y: ((theHeight/10)*95), opacity: 1,"z-index":1 },"+=.1").to(whereGo, .5, {
                 y: 0,
                 opacity: 1,
                 "z-index":2
@@ -69,7 +69,7 @@ class Projects extends Component {
                 .contains(document.querySelector(whereGoNext))
             ){
                 tl.set(whereGoNext, {
-                y: ((theHeight/10)*9),
+                y: ((theHeight/10)*95),
                 opacity: 1,
                 "z-index":0
               },"up").to(whereGoNext,.1, {
