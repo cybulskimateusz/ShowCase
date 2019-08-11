@@ -29,7 +29,6 @@ class Abilities extends Component {
     
     componentDidMount=()=>{
         
-        themeColors('black', 'green', 2)
         
         setTimeout(function(){
             this.setState({
@@ -38,6 +37,7 @@ class Abilities extends Component {
         }.bind(this),1000)
     }
     render() {
+        themeColors('black', 'green', 2)
         return (
             <>
             <ReactScrollWheelHandler

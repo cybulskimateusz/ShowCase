@@ -10,7 +10,7 @@ class NavBar extends Component{
         <>
         <nav id="menu" className=" d-flex flex-column position-fixed">
             <ul id="Nav"className="mb-0 d-flex flex-column list-group">
-                <NavLink className="menu-li mt-auto mr-0 mb-0 ml-auto rounded-circle" id="about_button" exact to="/"
+                <NavLink className="menu-li mt-auto mr-0 mb-0 ml-auto rounded-circle" activeClassName="active_gray" id="about_button" exact to="/"
                     onMouseEnter={
                         function(){
                             lateRealisticTyper("Hello","#li_about",0)
@@ -21,7 +21,7 @@ class NavBar extends Component{
                             ReactDOM.unmountComponentAtNode(document.getElementById('li_about'))
                         }
                     }></NavLink>
-                <NavLink className="menu-li mt-auto mr-0 mb-0 ml-auto rounded-circle" id="projects_button" to="/projects"
+                <NavLink className="menu-li mt-auto mr-0 mb-0 ml-auto rounded-circle" activeClassName="active_gray" id="projects_button" to="/projects"
                     onMouseEnter={
                         function(){
                             lateRealisticTyper("Projects","#li_projects",0)
@@ -32,7 +32,7 @@ class NavBar extends Component{
                             ReactDOM.unmountComponentAtNode(document.getElementById('li_projects'))
                         }
                     }></NavLink>
-                <NavLink onMouseEnter={
+                <NavLink  activeClassName="active_green" onMouseEnter={
                         function(){
                             lateRealisticTyper("Abilities","#li_abilities",0)
                         }
@@ -43,7 +43,7 @@ class NavBar extends Component{
                         }
                     }
                     className="menu-li mt-auto mr-0 mb-0 ml-auto rounded-circle" id="abilities_button" to="/abilities" ></NavLink>
-                <NavLink onMouseEnter={
+                <NavLink  activeClassName="active_green" onMouseEnter={
                         function(){
                             lateRealisticTyper("Education","#li_education",0)
                         }
@@ -54,7 +54,7 @@ class NavBar extends Component{
                         }
                     }
                     className="menu-li mt-auto mr-0 mb-0 ml-auto rounded-circle" id="education_button" to="/education" ></NavLink>
-                <NavLink onMouseEnter={
+                <NavLink  activeClassName="active_white" onMouseEnter={
                         function(){
                             lateRealisticTyper("Send message","#li_sendmessage",0)
                         }
@@ -65,7 +65,7 @@ class NavBar extends Component{
                         }
                     }
                     className="menu-li mt-auto mr-0 mb-0 ml-auto rounded-circle" id="sendmessage_button" to="/sendmessage" ></NavLink>
-                <NavLink onMouseEnter={
+                <NavLink  activeClassName="active_green" onMouseEnter={
                         function(){
                             lateRealisticTyper("Socials","#li_socials",0)
                         }

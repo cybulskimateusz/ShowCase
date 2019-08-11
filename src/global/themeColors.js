@@ -19,7 +19,6 @@ function themeColors(bgColor, themeColor, headerAction, headerColor=themeColor){
     var tl      = new TimelineMax()
     
     var nav     = ['.menu-li', '#menu_text']
-    var active  = '.active'
     var root    = ['#root', 'body', 'html']
     var header  = '#header'
     
@@ -29,11 +28,7 @@ function themeColors(bgColor, themeColor, headerAction, headerColor=themeColor){
             backgroundColor:switchColor(bgColor)
         })
         .set(nav,{
-            color:switchColor(themeColor),
-            backgroundColor:'transparent'
-        })
-        .set(active,{
-            backgroundColor:switchColor(themeColor)
+            color:switchColor(themeColor)
         })
     
     switch(headerAction){
