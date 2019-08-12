@@ -14,7 +14,7 @@ class NavBar extends Component{
         const {color} = this.props
         return (
         <>
-        <nav id="menu" className=" d-flex flex-column position-fixed">
+        <nav id="menu" className=" d-flex flex-column position-absolute">
             <ul id="Nav"className="mb-0 d-flex flex-column list-group">
                 <NavLink
                     id="about_button"
