@@ -5,8 +5,8 @@ import ApolloClient from "apollo-boost"
 import { ApolloProvider } from "react-apollo"
 import ExchangeSocials from "./ExchangeSocials"
 import ReactScrollWheelHandler from "react-scroll-wheel-handler"
-import themeColors from '../../../global/themeColors'
 import matrixRewrite from '../../../global/matrixRewrite'
+import {connect} from 'react-redux'
 
 
 const client = new ApolloClient({
@@ -14,17 +14,17 @@ const client = new ApolloClient({
 });
 
 class Socials extends Component {
-  componentDidMount = () => {
-      themeColors('black','green',2)
-  };
   render() {
     var currentLocation = 0;
     var nextLocation = 1;
+    const {turnGreen} = this.props;
     return (
+      turnGreen(),
       <>
         <ReactScrollWheelHandler upHandler={()=>{
         window.location.href="#/sendmessage"
     }}>
+    <div className="d-flex h-100 position-absolute w-100 my-green my-bg-black">
         <div className="fill-width">
         <Header preText="System.out.print( " text="contact" postText=" )_" />
         <div className="socials ml-lg-5">
@@ -144,10 +144,16 @@ class Socials extends Component {
               >|| copy</h1>
         </div>
           </div>
+          </div>
           </ReactScrollWheelHandler>
       </>
     );
   }
 }
 
-export default Socials;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    turnGreen: () => dispatch({ type: 'green' })
+  }
+};    
+export default connect(null, mapDispatchToProps)(Socials);

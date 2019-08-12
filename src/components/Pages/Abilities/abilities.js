@@ -6,7 +6,7 @@ import ApolloClient from "apollo-boost"
 import { ApolloProvider } from "react-apollo"
 import { Scrollbars } from 'react-custom-scrollbars'
 import ReactScrollWheelHandler from "react-scroll-wheel-handler"
-import themeColors from '../../../global/themeColors'
+import { connect } from 'react-redux'
 
 const client = new ApolloClient({
   uri: "https://api-euwest.graphcms.com/v1/cjxlm9rgg00bi01hwbfp58wps/master"
@@ -28,8 +28,6 @@ class Abilities extends Component {
     }
     
     componentDidMount=()=>{
-        
-        
         setTimeout(function(){
             this.setState({
                 isMount:true
@@ -37,8 +35,9 @@ class Abilities extends Component {
         }.bind(this),1000)
     }
     render() {
-        themeColors('black', 'green', 2)
+        const {turnGreen} = this.props
         return (
+            turnGreen(),
             <>
             <ReactScrollWheelHandler
                 upHandler={()=>{
@@ -52,8 +51,8 @@ class Abilities extends Component {
                             window.location.href="#/education"
                     }}}
             >
-            <Header preText="SELECT * FROM " text="abilities" postText="_" />
-            <div className="d-flex h-100 position-absolute w-100">
+            <Header className="my-green" preText="SELECT * FROM " text="abilities" postText="_" />
+            <div className="d-flex h-100 position-absolute w-100 my-bg-black my-green">
             <Scrollbars onUpdate={this.handleUpdate}>
             <div id="abilities" className="position-absolute text-center w-100">
                 <ApolloProvider client={client}>
@@ -68,4 +67,10 @@ class Abilities extends Component {
   }
 }
 
-export default Abilities;
+const mapDispatchToProps = (dispatch) => {
+    return {
+      turnGreen: () => dispatch({ type: 'green' })
+    }
+  };    
+
+export default connect(null, mapDispatchToProps)(Abilities);

@@ -4,7 +4,7 @@ import Terminal from "terminal-in-react"
 import "./sendmessage.css"
 import axios from 'axios'
 import ReactScrollWheelHandler from "react-scroll-wheel-handler"
-import themeColors from '../../../global/themeColors'
+import {connect} from 'react-redux'
 
 
 class SendMessage extends Component {
@@ -12,35 +12,29 @@ class SendMessage extends Component {
     super();
     this.state = {
       email: "",
-      message: "",
-      isMount:false
+      message: ""
     };
   }
-    componentDidMount=()=>{
-        
-        themeColors('black','white',2)
-        
-    setTimeout(function(){
-            this.setState({
-            isMount:true
-        })
-        }.bind(this),1000)
-    }
   render() {
 
-    const mailReg = /^[0-9a-z_.-]+@[0-9a-z.-]+\.[a-z]{2,3}$/i;
+    const mailReg = /^[0-9a-z_.-]+@[0-9a-z.-]+\.[a-z]{2,3}$/i
+    var isMount = false
+    const {turnWhite} = this.props
+    setTimeout(function(){isMount=true},1000)
 
     return (
+      turnWhite(),
       <>
         <ReactScrollWheelHandler downHandler={()=>{
-        if(this.state.isMount){
+        if(isMount){
         window.location.href="#/socials"
         }}}
  upHandler={()=>{
-            if(this.state.isMount){
+            if(isMount){
             window.location.href="#/education"
            }}}>
-        <Header preText="" text="sendMessage()" postText="_" />
+        <Header className="text-white" preText="" text="sendMessage()" postText="_" />
+            <div className="d-flex h-100 position-absolute w-100 my-bg-black text-white">
           <Terminal
             descriptions={{
         'send':'send message',
@@ -130,10 +124,16 @@ class SendMessage extends Component {
               } else print(`-PassedThrough:${cmd}: is not correct`);
             }}
           />
+          </div>
  </ReactScrollWheelHandler>
       </>
     );
   }
 }
 
-export default SendMessage;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    turnWhite: () => dispatch({ type: 'white' })
+  }
+};    
+export default connect(null, mapDispatchToProps)(SendMessage);

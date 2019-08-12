@@ -6,7 +6,7 @@ import { ApolloProvider } from "react-apollo"
 import ExchangeEducation from "./ExchangeEducation"
 import './education.css'
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
-import themeColors from '../../../global/themeColors'
+import {connect} from 'react-redux'
 
 const maxHeight = window.innerHeight;
 const tl = new TimelineMax();
@@ -17,32 +17,20 @@ const client = new ApolloClient({
 });
 
 class Education extends Component{
-    constructor(props) {
-      super(props);
-		
-      this.state = {
-        isMount: false,
-      }
-   }
-    componentDidMount=()=>{
-        
-        themeColors('black', 'green',2)
-        
-        setTimeout(function(){
-            this.setState({
-            isMount:true
-        })
-        }.bind(this),1000)
-    }
+
     render(){
       
       var currentLocation = 0;
       var nextLocation =1;
+    var isMount = false
+        const {turnGreen}= this.props
+    setTimeout(function(){isMount=true},1000)
       
     return (
+        turnGreen(),
         <ReactScrollWheelHandler
             upHandler={() => {
-        if(this.state.isMount){
+        if(isMount){
                 const schools = document.querySelectorAll(".school")
                 
                 if (currentLocation <= nextLocation)
@@ -62,7 +50,7 @@ class Education extends Component{
             window.location.href="#/abilities"
             }}}}
         downHandler={() => {
-            if(this.state.isMount){
+            if(isMount){
             const schools = document.querySelectorAll(".school")
             
             if (currentLocation >= nextLocation)
@@ -82,16 +70,22 @@ class Education extends Component{
                 window.location.href="#/sendmessage"
                 }}}}
         >
-            <Header preText="return " text="education" postText="_"/>
+            <Header className="my-green" preText="return " text="education" postText="_"/>
+            <div className="d-flex h-100 position-absolute w-100 my-bg-black my-green">
             <ul id="education" className="education my-0 mr-0 ml-1 mt-lg-2 mr-lg-auto mb-lg-auto ml-lg-5">
             <ApolloProvider client={client}>
               <ExchangeEducation />
             </ApolloProvider>
           </ul>
+          </div>
             </ReactScrollWheelHandler>
         );
         
     }
 }
-
-export default Education;
+const mapDispatchToProps = (dispatch) => {
+    return {
+      turnGreen: () => dispatch({ type: 'green' })
+    }
+  };    
+export default connect(null, mapDispatchToProps)(Education);

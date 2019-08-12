@@ -50,6 +50,26 @@ a:hover{
 .fill-width{
   width:100vw;
 }
+
+.my-gray{
+  color:#4d4d4d !important;
+}
+.my-green{
+  color:#28ff00 !important;
+}
+.my-black{
+  color:#000 !important;
+}
+.my-bg-gray{
+  background-color:#4d4d4d !important;
+}
+.my-bg-green{
+  background-color:#28ff00 !important;
+}
+.my-bg-black{
+  background-color:#000 !important;
+}
+
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }

@@ -43,7 +43,7 @@
     object-fit: cover;
 }
 .project_container:nth-child(1){
-    animation: showfirst 1s linear both;
+    animation: showfirst .3s linear both;
 }
 .project_container:nth-child(2){
     animation: showsecond 1s linear both;

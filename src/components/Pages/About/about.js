@@ -4,7 +4,7 @@ import ApolloClient from "apollo-boost"
 import { ApolloProvider } from "react-apollo"
 import ExchangeAbout from "./ExchangeAbout"
 import ReactScrollWheelHandler from "react-scroll-wheel-handler"
-import themeColors from '../../../global/themeColors'
+import {connect} from 'react-redux'
 
 
 const client = new ApolloClient({
@@ -12,16 +12,14 @@ const client = new ApolloClient({
 });
 
 class About extends Component{
-    componentDidMount=()=>{
-        themeColors('white', 'gray')
-    }
-    
-    render(){
+  render(){
+    const {turnGray} = this.props
     return (
+      turnGray(),
         <ReactScrollWheelHandler downHandler={()=>{
         window.location.href = "#/projects"
     }}>
-        <div className="content">
+        <div className="content bg-white my-gray">
         <ApolloProvider client={client}>
           <ExchangeAbout/>
         </ApolloProvider>
@@ -31,5 +29,9 @@ class About extends Component{
 }
 }
                
-
-export default About;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    turnGray: () => dispatch({ type: 'gray' })
+  }
+};    
+export default connect(null, mapDispatchToProps)(About);
