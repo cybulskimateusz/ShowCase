@@ -28,7 +28,7 @@ const ExchangeAbout = () => (
       if (error) return <p>Error :-( </p> 
 
       return data.abouts.map(
-        ({ id, name, surname, age, city, profilephoto }) => (
+        ({ id, name, surname, city, profilephoto }) => (
           <>
           <article id="about" className="col-12 p-0" key={id}>
             <img
@@ -58,7 +58,7 @@ const ExchangeAbout = () => (
           </p>
           <p className="age my-0 mx-auto d-inline">
             <b className="my-0 mx-auto d-inline">Age: </b>
-            {age}
+            {calculate_age(new Date(1999, 10, 9))}
           </p>
           <p className="city my-0 mx-auto d-inline">
             <b className="my-0 mx-auto d-inline">City: </b>
@@ -72,4 +72,10 @@ const ExchangeAbout = () => (
   </Query>
 );
 
+function calculate_age(dob) { 
+  var diff_ms = Date.now() - dob.getTime();
+  var age_dt = new Date(diff_ms); 
+
+  return Math.abs(age_dt.getUTCFullYear() - 1970);
+}
 export default ExchangeAbout;
