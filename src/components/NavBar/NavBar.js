@@ -5,6 +5,7 @@ import SingleNavLink from './SingleNavLink'
 
 class NavBar extends Component{
     state = {
+        color:this.props,
         buttons:[
             {
                 id:"about_button",
@@ -56,11 +57,16 @@ class NavBar extends Component{
             }
         ]
     }
+
+    componentWillReceiveProps = (props) =>{
+        this.setState({color:props})
+    }
+
     render(){
-        const {color} = this.props
+        var {color} = this.state.color
         return (
         <>
-        <nav id="menu" className=" d-flex flex-column position-absolute">
+        <nav id="menu" className=" d-flex flex-column position-fixed">
             <ul id="Nav"className="mb-0 d-flex flex-column list-group">
                 {this.state.buttons.map(function({id, exact, location, activeClass, typedText,typedTextLocation}){
                 return (
@@ -77,7 +83,7 @@ class NavBar extends Component{
                 )})}
             </ul>
         </nav>
-                    <ul id="menu_text" style={{color}} className="list-group d-none d-lg-flex flex-column text-right position-absolute">
+                    <ul id="menu_text" style={{color}} className="list-group d-none d-lg-flex flex-column text-right position-fixed">
                        {this.state.buttons.map(function({typedTextLocation}){
                           return <li key={typedTextLocation} id={typedTextLocation} style={{color}} className="menu_text_li small mt-auto mr-0 mb-0 ml-auto d-block"></li>
                        })} 
