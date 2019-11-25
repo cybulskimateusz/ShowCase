@@ -2,4 +2,4 @@
 
 **React** , **Redux**, **GraphQL**, **Bootstrap**
 
-## Game is available [here](https://cybulskimateusz.com)
+## App is available [here](https://cybulskimateusz.com)
