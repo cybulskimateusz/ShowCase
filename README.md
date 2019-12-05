@@ -2,4 +2,4 @@
 
 **React** , **Redux**, **GraphQL**, **Bootstrap**
 
-## App is available [here](https://cybulskimateusz.com)
+## App is available [here](https://cybulskimateusz.netlify.com/)
